@@ -628,10 +628,14 @@ const Home = () => {
                                 <article className="relative flex flex-col justify-center w-full ">
                                     {/* Ingenium description */}
                                     <div className="flex flex-col items-center justify-center">
+                                        {/* Título proyecto */}
                                         <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[7vw] text-center font-bold">{language === 'en' ? 'Current working project "Ingenium.net.ar""' : 'Actualmente trabajando en el proyecto "Ingenium.net.ar"'}</h2>
-                                        <p className="text-slate-400 dark:text-slate-200 text-center mt-5">{language === 'en' ? 'Your new favorite weather website!' : `Ingenium es una empresa que ofrece servicios de administración y gestión financiera`}</p>
-                                        <p className="text-slate-400 dark:text-slate-200 text-center font-bold mt-2">{language === 'en' ? 'Your new favorite weather website!' : `¡Yo estoy haciendo la web para ellos!`}</p>
-                                        <p className="text-slate-400 dark:text-slate-400 text-center mt-5">{language === 'en' ? "Sign up, send a request, and I'll give you permission to access the prototype, so you can check the most updated version!" : "Regístrate, envía una solicitud, ¡Y te daré permiso para acceder al prototipo para que puedas consultar la versión más actualizada!"}</p>
+                                        {/* Subtítulo proyecto */}
+                                        <p className="text-slate-400 dark:text-slate-200 text-center mt-5">{language === 'en' ? 'Ingenium is a company that offers administration, financial management, and...' : `Ingenium es una empresa que ofrece servicios de administración, gestión financiera, y...`}</p>
+                                        {/* Subtítulo mensaje */}
+                                        <p className="text-slate-400 dark:text-slate-200 text-center font-bold mt-2">{language === 'en' ? "I'm making the website for them!" : `¡Yo estoy haciendo la web para ellos!`}</p>
+                                        {/* Aclaración gris */}
+                                        <p className="text-slate-400 dark:text-slate-400 text-center mt-[4vw]">{language === 'en' ? "Visit the website! Every time I make updates they will be reflected in the same button below" : "¡Visita la web! Cada vez que haga actualizaciones se verán reflejadas en el mismo botón de abajo"}</p>
                                     </div>
                                     {/* Ingenium description */}
 
@@ -693,11 +697,11 @@ const Home = () => {
 
                                     {/* Ingenium technologies icons */}
 
-                                    {/* Ingenium login image */}
-                                    <div className="max-phone:min-w-0 block rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-blue-300 max-phone:shadow-blue-300 dark:hover:shadow-blue-300 hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-400">
+                                    {/* Ingenium Trailer video */}
+                                    <div className="max-phone:min-w-0 block aspect-video     rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-blue-300 max-phone:shadow-blue-300 dark:hover:shadow-blue-300 hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-400">
                                         <video className="aspect-video rounded-2xl h-30" src={IngeniumFinishedTrailer} controls="true" muted="true" alt="MuniaLoginPic" />
                                     </div>
-                                    {/* Ingenium login image */}
+                                    {/* Ingenium Trailer video */}
                                 </article>
                                 {/* Ingenium project container*/}
 
@@ -725,7 +729,7 @@ const Home = () => {
                         <div className="items-center gap-0 justify-between h-fit max-phone:w-[100%] flex">
                             {/* Email Input */}
                             <input
-                                className="bg-black/5 dark:bg-white/5 w-full max-phone:w-[full] max-phone:h-[14vw] h-[4.5vw] py-[2vw] px-[2vw] max-phone:text-[3.8vw] rounded-lg place-items-start text-slate-600 dark:text-slate-300"
+                                className="dark:bg-white bg-white px-4 py-3 outline-none w-full mr-[4vw] text-black font-semibold dark:text-[#3642b2] dark:font-semibold rounded-lg border-[0.15vw] transition-colors duration-100 border-solid border-black focus:border-[#818cf8]"
                                 type="text"
                                 defaultValue="marcosdamian054@gmail.com"
                                 readOnly
@@ -734,31 +738,13 @@ const Home = () => {
                             {/* Email Buttons */}
                             <div className="max-phone:h-[70%] flex items-center justify-end h-fit w-fit">
                                 {/* Send email button */}
-                                <div className="relative group/tooltip max-phone:text-[7vw] h-[4.5vw] w-[4.5vw] flex flex-col items-center">
-                                    <a
-                                        href="mailto:marcosdamian054@gmail.com"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="bg-indigo-100 hover:bg-opacity-80 dark:bg-indigo-500 hover:dark:bg-opacity-90 text-indigo-500 dark:text-indigo-100 w-fit h-fit max-phone:py-[80%] py-[1vw] px-[1.5vw] max-phone:px-[100%] rounded-lg flex items-end"
-                                    >
-                                        <div className="text-lg max-phone:text-[5vw]">
-                                            <FontAwesomeIcon icon={faPaperPlane} />
-                                        </div>
-                                    </a>
-
-                                    {/* Tooltip */}
-                                    <div className="max-phone:hidden absolute h-fit w-fit -translate-y-0 -translate-x-0">
-                                        <span className="pointer-events-none transition-all font-semibold ease-out opacity-0 z-20 -translate-y-20 py-1 px-1.5 text-xs max-phone:text-[7vw] translate-x-0 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 duration-500 dark:bg-[#5c64dc] dark:text-gray-200 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-24">
-                                            {language === 'en'
-                                                ? "Click to send me an email"
-                                                : 'Haz click para enviarme un email'}
-                                        </span>
-
-                                        {/* Flechita (pseudo-elemento before) */}
-                                        <span className="before:content-[''] before:absolute before:bg-gray-800 before:z-18 before:rounded-sm before:ease-in before:opacity-0 before:w-2.5 before:rotate-45 before:transition-opacity before:h-2.5 before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:duration-100 before:-translate-y-24 before:dark:bg-[#6d75f0] before:dark:gray-800 before:group-hover/tooltip:opacity-100">
-                                        </span>
-                                    </div>
-                                </div>
+                                <button className="overflow-hidden relative w-32 p-2 h-12 bg-black text-white text-center border-none rounded-md text-xl font-bold cursor-pointer z-10 group">
+                                    {language === 'en' ? 'Email me!' : '¡Mi correo!'}
+                                    <span className="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left" />
+                                    <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left" />
+                                    <span className="absolute w-36 h-32 -top-8 -left-2 bg-[#818cf8] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left" />
+                                    <span className={`group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 ${language === 'en' ? "left-[1.3vw]" : "left-3"} text-center z-10`}>{language === 'en' ? 'Email me!' : '¡Mi correo!'}</span>
+                                </button>
                                 {/* Send email button */}
                             </div>
 
