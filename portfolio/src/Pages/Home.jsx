@@ -726,25 +726,27 @@ const Home = () => {
                             <FontAwesomeIcon icon={faEnvelope} className="scale-110" />
                         </header>
                         {/* Email Title */}
-                        <div className="items-center gap-0 justify-between h-fit max-phone:w-[100%] flex">
+                        <div className="items-center gap-0 justify-between h-fit max-phone:w-[100%] flex max-phone:flex-col">
                             {/* Email Input */}
-                            <input
-                                className="dark:bg-white bg-white px-4 py-3 outline-none w-full mr-[4vw] text-black font-semibold dark:text-[#3642b2] dark:font-semibold rounded-lg border-[0.15vw] transition-colors duration-100 border-solid border-black focus:border-[#818cf8]"
-                                type="text"
-                                defaultValue="marcosdamian054@gmail.com"
-                                readOnly
-                            />
+                            <h4 className="text-slate-400 dark:text-slate-200 text-center text-[4vw] my-[3vw]">{language === 'en' ? 'Here you have my email!' : 'Acá tenés mi correo electrónico!'}</h4>
+                            <a
+                                href="mailto:marcosdamian054@gmail.com"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="w-full flex-col flex justify-center items-center text-center"
+                            >
+                                <input
+                                    className="dark:bg-black max-phone:w-[80%] bg-white px-4 py-3 outline-none w-full mr-[4vw] text-black font-semibold dark:text-white dark:font-semibold rounded-lg border-[0.15vw] text-center transition-colors duration-100 border-solid border-black focus:border-[#818cf8]"
+                                    type="text"
+                                    defaultValue="marcosdamian054@gmail.com"
+                                    readOnly
+                                />
+                            </a>
                             {/* Email Input */}
                             {/* Email Buttons */}
-                            <div className="max-phone:h-[70%] flex items-center justify-end h-fit w-fit">
+                            <div className="max-phone:h-[70%] flex items-center justify-end h-fit w-fit max-phone:w-full">
                                 {/* Send email button */}
-                                <button className="overflow-hidden relative w-32 p-2 h-12 bg-black text-white text-center border-none rounded-md text-xl font-bold cursor-pointer z-10 group">
-                                    {language === 'en' ? 'Email me!' : '¡Mi correo!'}
-                                    <span className="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left" />
-                                    <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left" />
-                                    <span className="absolute w-36 h-32 -top-8 -left-2 bg-[#818cf8] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left" />
-                                    <span className={`group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 ${language === 'en' ? "left-[1.3vw]" : "left-3"} text-center z-10`}>{language === 'en' ? 'Email me!' : '¡Mi correo!'}</span>
-                                </button>
+
                                 {/* Send email button */}
                             </div>
 
