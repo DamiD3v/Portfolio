@@ -9,7 +9,7 @@ import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
 import HenrySquareIcon from '../assets/HenrySquareIcon.png'
 import MuniaLoginPic from '../assets/MuniaLoginPic.jpg'
 import ClimateDuckyScreenshot from '../assets/ClimateDuckyScreenshot.png'
-import IngeniumWebVideo from '../assets/IngeniumWebVideo/IngeniumWebVideo.mp4'
+import IngeniumFinishedTrailer from '../assets/IngeniumWebVideo/IngeniumFinishedTrailer.webm'
 import tailwindIcon from "../assets/CompaniesIcons/tailwind-svgrepo-com.svg";
 import HTML5Icon from "../assets/CompaniesIcons/html-5-svgrepo-com.svg";
 import MongoDBIcon from "../assets/CompaniesIcons/mongo-svgrepo-com.svg";
@@ -17,6 +17,9 @@ import reactIcon from "../assets/CompaniesIcons/react-svgrepo-com.svg";
 import cssIcon from "../assets/CompaniesIcons/css_svg_repo.svg";
 import framerIcon from "../assets/CompaniesIcons/Framer_light.svg";
 import framerDarkIcon from "../assets/CompaniesIcons/Framer_dark.svg";
+import ThreeJSDarkIcon from '../assets/CompaniesIcons/Three.js_dark.svg'
+import ThreeJSIcon from '../assets/CompaniesIcons/Three.js_light.svg'
+import BlenderIcon from '../assets/CompaniesIcons/BlenderIcon.svg'
 import "../index.css";
 import TooltipButton from "../components/TooltipButton";
 import HenryCertificate from '../assets/Henry certificate.jpg'
@@ -643,18 +646,22 @@ const Home = () => {
                                             </div>
                                             <div className="relative group/tooltip">
                                                 <img src={tailwindIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
-                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">CSS</span>
+                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">TailwindCSS</span>
                                             </div>
                                             <div className="relative group/tooltip">
                                                 <img src={reactIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
+                                            <div className="relative group/tooltip">
+                                                <img src={BlenderIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Blender</span>
+                                            </div>
                                             {theme === "light" ? <div className="relative group/tooltip">
-                                                <img src={framerIcon} className="w-4 max-phone:w-[10vw] max-phone:h-[10vw]" alt="" />
-                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Framer-motion</span>
+                                                <img src={ThreeJSIcon} className="w-6 max-phone:w-[10vw] max-phone:h-[10vw]" alt="" />
+                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Three.js</span>
                                             </div> : <div className="relative group/tooltip">
-                                                <img src={framerDarkIcon} className="w-4 max-phone:w-[10vw] max-phone:h-[10vw]" alt="" />
-                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Framer-motion</span>
+                                                <img src={ThreeJSDarkIcon} className="w-6 aspect-square max-phone:w-[10vw] max-phone:h-[10vw]" alt="" />
+                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Three.js</span>
                                             </div>
                                             }
                                         </div>
@@ -664,8 +671,8 @@ const Home = () => {
                                     {/* Ingenium redirect button */}
                                     <div className="flex flex-row mb-3 text-xl">
                                         <TooltipButton
-                                            link="https://www.figma.com/proto/msIxP85Kxae035Mx0YflRy/Dise%C3%B1o-de-%22INGENIUM%22?node-id=394-146&node-type=canvas&t=6GZwR454IGYC1EDz-1&scaling=scale-down-width&content-scaling=fixed&page-id=59%3A2888"
-                                            mainText={language === 'en' ? "Check how's the prototype going!" : '¡Ve a ver como está yendo el prototipo!'}
+                                            link="https://www.ingenium.net.ar/"
+                                            mainText={language === 'en' ? "Visit the website now!" : '¡Visita la web ahora!'}
                                             tooltipSpan={language === 'en' ? "Don't miss it!" : "¡No te lo pierdas!"}
                                             tooltipTextColor="dark:text-blue-200 text-white text-stroke-[0px] dark:text-stroke-[0px]"
                                             tooltipBackground="dark:bg-gray-800 dark:bg-none bg-[#261dd0]"
@@ -688,7 +695,7 @@ const Home = () => {
 
                                     {/* Ingenium login image */}
                                     <div className="max-phone:min-w-0 block rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-blue-300 max-phone:shadow-blue-300 dark:hover:shadow-blue-300 hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-400">
-                                        <video className="aspect-video rounded-2xl h-30" src={IngeniumWebVideo} controls="true" muted="true" alt="MuniaLoginPic" />
+                                        <video className="aspect-video rounded-2xl h-30" src={IngeniumFinishedTrailer} controls="true" muted="true" alt="MuniaLoginPic" />
                                     </div>
                                     {/* Ingenium login image */}
                                 </article>
@@ -708,31 +715,31 @@ const Home = () => {
 
 
                     {/* Email section start */}
-                    <section className="px-[8vw] w-full max-phone:flex max-phone:flex-col max-phone:items-center">
+                    <section className="px-[0vw] w-full max-phone:flex max-phone:flex-col max-phone:items-center">
                         {/* Email Title */}
                         <header className="font-bold text-3xl max-phone:text-[8vw] text-indigo-400 dark:text-gray-100 mb-[3vw] flex max-phone:justify-center max-[220px]:justify-start max-[220px]:pl-5 items-center gap-3">
                             <h2>{language === 'en' ? 'Email' : 'Correo electrónico'}</h2>
                             <FontAwesomeIcon icon={faEnvelope} className="scale-110" />
                         </header>
                         {/* Email Title */}
-                        <div className="items-center gap-6 justify-between max-phone:w-[90%] flex">
+                        <div className="items-center gap-0 justify-between h-fit max-phone:w-[100%] flex">
                             {/* Email Input */}
                             <input
-                                className="bg-black/5 dark:bg-white/5 w-3/4 max-phone:w-[full] max-phone:h-[14vw] h-14 py-[2vw] px-[2vw] max-phone:text-[5vw] rounded-lg place-items-center text-slate-600 dark:text-slate-300"
+                                className="bg-black/5 dark:bg-white/5 w-full max-phone:w-[full] max-phone:h-[14vw] h-[4.5vw] py-[2vw] px-[2vw] max-phone:text-[3.8vw] rounded-lg place-items-start text-slate-600 dark:text-slate-300"
                                 type="text"
                                 defaultValue="marcosdamian054@gmail.com"
                                 readOnly
                             />
                             {/* Email Input */}
                             {/* Email Buttons */}
-                            <div className="max-phone:h-[70%] h-14">
+                            <div className="max-phone:h-[70%] flex items-center justify-end h-fit w-fit">
                                 {/* Send email button */}
-                                <div className="relative group/tooltip max-phone:text-[7vw] h-full flex flex-col items-center">
+                                <div className="relative group/tooltip max-phone:text-[7vw] h-[4.5vw] w-[4.5vw] flex flex-col items-center">
                                     <a
                                         href="mailto:marcosdamian054@gmail.com"
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="bg-indigo-100 hover:bg-opacity-80 dark:bg-indigo-500 hover:dark:bg-opacity-90 text-indigo-500 dark:text-indigo-100 w-fit h-full max-phone:py-[80%] py-4 px-6 max-phone:px-[100%] rounded-lg flex items-center"
+                                        className="bg-indigo-100 hover:bg-opacity-80 dark:bg-indigo-500 hover:dark:bg-opacity-90 text-indigo-500 dark:text-indigo-100 w-fit h-fit max-phone:py-[80%] py-[1vw] px-[1.5vw] max-phone:px-[100%] rounded-lg flex items-end"
                                     >
                                         <div className="text-lg max-phone:text-[5vw]">
                                             <FontAwesomeIcon icon={faPaperPlane} />
@@ -740,7 +747,7 @@ const Home = () => {
                                     </a>
 
                                     {/* Tooltip */}
-                                    <div className="max-phone:hidden flex h-fit w-fit -translate-y-0 -translate-x-0">
+                                    <div className="max-phone:hidden absolute h-fit w-fit -translate-y-0 -translate-x-0">
                                         <span className="pointer-events-none transition-all font-semibold ease-out opacity-0 z-20 -translate-y-20 py-1 px-1.5 text-xs max-phone:text-[7vw] translate-x-0 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 duration-500 dark:bg-[#5c64dc] dark:text-gray-200 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-24">
                                             {language === 'en'
                                                 ? "Click to send me an email"
