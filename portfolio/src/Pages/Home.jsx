@@ -276,7 +276,7 @@ const Home = () => {
                             <div className="flex flex-col items-center gap-2 max-w-[90%] mt-1">
                                 <h1 className="shrink-0 text-3xl max-phone:text-[9vw] my-6 text-center font-bold text-slate-600 dark:text-slate-100 max-phone:leading-[10vw]">Marcos Damián E. Medina</h1>
                                 <p className="shrink-0 mt-3 text-center hyphens-auto text-slate-700 text-2xl max-phone:text-[9vw] dark:text-slate-200 max-w-full font-Jersey10PixelFont">{language === 'en' ? 'Welcome!' : '¡Bienvenidos!'}</p>
-                                <p className="shrink-0 text-center text-slate-700 text-lg max-phone:text-[7vw] max-phone:font-light dark:text-slate-300 max-w-full w-full h-fit rounded-2xl max-phone:mt-5 max-phone:mb-10 max-phone:leading-[8vw] max-phone:tracking-wide mt-2">{language === 'en' ? 'I am passionate about web development, focused on the integration of social networks' : 'Soy un apasionado del desarrollo de páginas web, enfocado en la integración de redes sociales'}</p>
+                                <p className="shrink-0 text-center text-slate-700 text-lg max-phone:text-[6vw] max-phone:font-light dark:text-slate-300 max-w-full w-full h-fit rounded-2xl max-phone:mt-5 max-phone:mb-10 max-phone:leading-[8vw] max-phone:tracking-wide mt-2">{language === 'en' ? 'I am passionate about web development, focused on the integration of social networks' : 'Soy un apasionado del desarrollo de páginas web, enfocado en la integración de redes sociales'}</p>
                             </div>
                             {/* Presentation title */}
 
@@ -375,7 +375,7 @@ const Home = () => {
                     <section className="px-[8vw] w-full flex flex-col items-center shrink-0 mt-3 mb-3" id="hero-section">
 
                         {/* Experience section title start */}
-                        <header className="flex shrink-0 font-bold text-4xl max-phone:text-[10vw] underline underline-offset-4 decoration-solid text-indigo-400 dark:text-gray-100 mb-12 max-phone:mb-1 max-phone:mx-0 gap-4 items-end">
+                        <header className="flex shrink-0 font-bold text-4xl max-phone:text-[9vw] underline underline-offset-4 decoration-solid text-indigo-400 dark:text-gray-100 mb-12 max-phone:mb-1 max-phone:mx-0 gap-4 items-end">
                             <h2>{language === 'en' ? 'My experience' : 'Mi experiencia'}</h2>
                             <FontAwesomeIcon className="scale-110" icon={faBriefcase} />
                         </header>
@@ -388,14 +388,14 @@ const Home = () => {
                                 {/* Munia experience */}
                                 {/* Experience Job title start */}
                                 <div className="flex flex-col gap-1">
-                                    <h2 className="text-lg max-phone:text-[9vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-wide mb-[3vw]">{language === 'en' ? 'Front-End Developer • Munia - Mental and Emotional Health at Work' : 'Desarrollador web Frontend • Munia - Salud Mental y Emocional en el Trabajo'}</h2>
-                                    <p className="text-sm max-phone:text-[7vw] text-slate-500 dark:text-slate-400">Sept. 2023 - Nov. 2023</p>
+                                    <h2 className="text-lg max-phone:text-[7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal mb-[3vw]">{language === 'en' ? 'Front-End Developer • Munia - Mental and Emotional Health at Work' : 'Desarrollador web Frontend • Munia - Salud Mental y Emocional en el Trabajo'}</h2>
+                                    <p className="text-sm max-phone:text-[6vw] text-slate-500 dark:text-slate-400">Sept. 2023 - Nov. 2023</p>
                                 </div>
                                 {/* Experience Job title end */}
 
 
                                 {/* Experience Job description */}
-                                <ul className="list-disc flex flex-col gap-2 ml-8 mb-12 text-slate-700 dark:text-gray-300 text-md max-phone:text-[7vw]">
+                                <ul className="list-disc flex flex-col gap-2 ml-8 mb-12 text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
                                     <li>{language === 'en' ? 'Create a view to be able to view and edit the information of each provider, such as adding the services they offer, their time availability, and their professional documents, among others' : 'Crea una vista para poder visualizar y editar la información de cada proveedor, como agregar los servicios que ofrecen, su disponibilidad horaria, sus documentos profesionales, entre otros'}</li>
                                     <li>{language === 'en' ? 'Plan and carry out the development of a table that will allow comments to be displayed effectively on the platform' : 'Planificar y llevar a cabo el desarrollo de una tabla que permita visualizar de manera efectiva los comentarios en la plataforma'}</li>
                                     <li>{language === 'en' ? 'Conditional rendering based on dynamic routes and user type, using Redux toolkit, according to the role of each user, and React-Router-DOM' : 'Representación condicional basada en rutas dinámicas y tipo de usuario, utilizando el kit de herramientas Redux según el rol de cada usuario y React-Router-DOM'}</li>
@@ -406,14 +406,14 @@ const Home = () => {
                                 {/* Ingenium experience */}
                                 {/* Experience Job title start */}
                                 <div className="flex flex-col gap-1 ">
-                                    <h2 className="text-lg max-phone:text-[9vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-wide mb-[3vw]">{language === 'en' ? 'Front-End Developer • Ingenium - Financial management and administration' : 'Desarrollador web Frontend • Ingenium - Gestión y administración financiera'}</h2>
-                                    <p className="text-sm max-phone:text-[7vw] text-slate-500 dark:text-slate-400">Sept. 2024 - Nov. 2024</p>
+                                    <h2 className="text-lg max-phone:text-[7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal mb-[3vw]">{language === 'en' ? 'Front-End Developer • Ingenium - Financial management and administration' : 'Desarrollador web Frontend • Ingenium - Gestión y administración financiera'}</h2>
+                                    <p className="text-sm max-phone:text-[6vw] text-slate-500 dark:text-slate-400">Sept. 2024 - Nov. 2024</p>
                                 </div>
                                 {/* Experience Job title end */}
 
 
                                 {/* Experience Job description */}
-                                <ul className="list-disc flex flex-col gap-2 ml-8 text-slate-700 dark:text-gray-300 text-md max-phone:text-[7vw]">
+                                <ul className="list-disc flex flex-col gap-2 ml-8 text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
                                     <li>{language === 'en' ? 'Design and creation of the company logo, "Ingcoin", using Blender to create a detailed 3D model, incorporating the company\'s slogan and year of foundation' : 'Diseño y creación del logo de la empresa, "Ingcoin", utilizando Blender para crear un modelo 3D detallado, incorporando el eslogan de la empresa y el año de fundación'}</li>
                                     <li>{language === 'en' ? 'Develop the main landing page using React.js, Framer-Motion, and TailwindCSS, ensuring an intuitive and modern user experience that reflects the company\'s branding' : 'Desarrollar la página de inicio principal utilizando React.js, Framer-Motion, y TailwindCSS, garantizando una experiencia de usuario intuitiva y moderna que refleje la imagen de la empresa'}</li>
                                     <li>{language === 'en' ? 'Integrate a responsive design across the website to optimize its functionality on various screen sizes, enhancing accessibility and user interaction' : 'Integrar un diseño responsive en todo el sitio web para optimizar su funcionalidad en diferentes tamaños de pantalla, mejorando la accesibilidad y la interacción del usuario'}</li>
@@ -435,7 +435,7 @@ const Home = () => {
 
 
                         {/* Projects section title */}
-                        <header className="flex font-bold text-center underline underline-offset-4 text-4xl max-phone:text-[10vw] text-indigo-400 dark:text-gray-100 mb-12 max-phone:mb-8 max-phone:pl-3 max-phone:min-w-full max-phone:justify-center max-phone:px-0 items-center gap-3">
+                        <header className="flex font-bold text-center underline underline-offset-4 text-4xl max-phone:text-[9vw] text-indigo-400 dark:text-gray-100 mb-12 max-phone:mb-8 max-phone:pl-3 max-phone:min-w-full max-phone:justify-center max-phone:px-0 items-center gap-3">
                             <h2>{language === 'en' ? 'My projects' : 'Mis proyectos'}</h2>
                             <FontAwesomeIcon icon={faStar} className="scale-110" />
                         </header>
@@ -443,7 +443,7 @@ const Home = () => {
 
 
                         {/* My projects */}
-                        <div className="w-full max-tablet:w-[80%] max-phone:w-[80%] flex flex-col items-center gap-10 max-phone:text-[7vw]">
+                        <div className="w-full max-tablet:w-[80%] max-phone:w-[80%] flex flex-col items-center gap-10 max-phone:text-[5vw]">
 
                             {/* My projects container */}
                             <div className="grid gap-10">
@@ -453,7 +453,7 @@ const Home = () => {
                                 <article className="relative flex flex-col justify-between w-full mt-4 mb-20 max-phone:mb-6">
                                     {/* Munia project description */}
                                     <div className="flex flex-col items-center">
-                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[7vw] text-center font-bold">{language === 'en' ? 'Munia sessions 1:1' : 'Munia Sesiones 1:1'}</h2>
+                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[7.5vw] text-center font-bold">{language === 'en' ? 'Munia sessions 1:1' : 'Munia Sesiones 1:1'}</h2>
                                         <p className="text-slate-400 dark:text-slate-200 text-center mt-5">{language === 'en' ? 'The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses' : 'La aplicación web permite a los profesionales de la salud de “Munia.co” conectarse con empleados de empresas asociadas a través de Zoom para sesiones y diagnósticos virtuales'}</p>
                                     </div>
                                     {/* Munia project description */}
@@ -463,15 +463,15 @@ const Home = () => {
                                         <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? "(Web tech stack used into the project)" : '(Tecnologías web utilizadas en el proyecto)'}</p>
                                         <div className="flex flex-row items-center gap-1">
                                             <div className="relative group/tooltip">
-                                                <img src={HTML5Icon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={HTML5Icon} className="w-8 max-phone:w-[11vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
                                             </div>
                                             <div className="relative group/tooltip">
-                                                <img src={tailwindIcon} className="w-9 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={tailwindIcon} className="w-9 max-phone:w-[11vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Tailwind</span>
                                             </div>
                                             <div className="relative group/tooltip">
-                                                <img src={reactIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={reactIcon} className="w-8 max-phone:w-[11vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
                                         </div>
@@ -528,16 +528,20 @@ const Home = () => {
                                         <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? "(Web tech stack used into the project)" : '(Tecnologías web utilizadas en el proyecto)'}</p>
                                         <div className="flex">
                                             <div className="relative group/tooltip">
-                                                <img src={HTML5Icon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={HTML5Icon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium
                                                 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
                                             </div>
                                             <div className="relative group/tooltip">
-                                                <img src={MongoDBIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={cssIcon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
+                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">CSS</span>
+                                            </div>
+                                            <div className="relative group/tooltip">
+                                                <img src={MongoDBIcon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Mongo DB</span>
                                             </div>
                                             <div className="relative group/tooltip">
-                                                <img src={reactIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={reactIcon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
                                         </div>
@@ -567,19 +571,19 @@ const Home = () => {
                                         <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? "(Web tech stack used into the project)" : '(Tecnologías web utilizadas en el proyecto)'}</p>
                                         <div className="flex flex-row items-center gap-1">
                                             <div className="relative group/tooltip">
-                                                <img src={HTML5Icon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={HTML5Icon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
                                             </div>
                                             <div className="relative group/tooltip">
-                                                <img src={cssIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={cssIcon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">CSS</span>
                                             </div>
                                             <div className="relative group/tooltip">
-                                                <img src={reactIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={reactIcon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
                                             {theme === "light" ? <div className="relative group/tooltip">
-                                                <img src={framerIcon} className="w-4 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={framerIcon} className="w-4 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Framer-motion</span>
                                             </div> : <div className="relative group/tooltip">
                                                 <img src={framerDarkIcon} className="w-4 max-phone:w-[10vw] max-phone:h-[10vw]" alt="" />
@@ -644,7 +648,7 @@ const Home = () => {
                                         <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? "(Web tech stack to be used in the project)" : '(Tecnologías web a utilizar en el proyecto)'}</p>
                                         <div className="flex flex-row items-center gap-1">
                                             <div className="relative group/tooltip">
-                                                <img src={HTML5Icon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={HTML5Icon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
 
                                                 <span className="max-phone:hidden max-phone:before:hidden absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
                                             </div>
@@ -653,18 +657,18 @@ const Home = () => {
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">TailwindCSS</span>
                                             </div>
                                             <div className="relative group/tooltip">
-                                                <img src={reactIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={reactIcon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
                                             <div className="relative group/tooltip">
-                                                <img src={BlenderIcon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
+                                                <img src={BlenderIcon} className="w-8 max-phone:w-[10vw] max-phone:h-[12vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Blender</span>
                                             </div>
                                             {theme === "light" ? <div className="relative group/tooltip">
-                                                <img src={ThreeJSIcon} className="w-6 max-phone:w-[10vw] max-phone:h-[10vw]" alt="" />
+                                                <img src={ThreeJSIcon} className="w-6 max-phone:w-[8.6vw] max-phone:h-[10vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Three.js</span>
                                             </div> : <div className="relative group/tooltip">
-                                                <img src={ThreeJSDarkIcon} className="w-6 aspect-square max-phone:w-[10vw] max-phone:h-[10vw]" alt="" />
+                                                <img src={ThreeJSDarkIcon} className="w-6 aspect-square max-phone:w-[8.6vw] max-phone:h-[10vw]" alt="" />
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Three.js</span>
                                             </div>
                                             }
@@ -721,26 +725,28 @@ const Home = () => {
                     {/* Email section start */}
                     <section className="px-[0vw] w-full max-phone:flex max-phone:flex-col max-phone:items-center">
                         {/* Email Title */}
-                        <header className="font-bold text-3xl max-phone:text-[8vw] text-indigo-400 dark:text-gray-100 mb-[3vw] flex max-phone:justify-center max-[220px]:justify-start max-[220px]:pl-5 items-center gap-3">
+                        <header className="font-bold text-3xl max-phone:text-[7vw] text-indigo-400 dark:text-gray-100 mb-[3vw] flex max-phone:justify-center justify-center max-[220px]:pl-5 items-center gap-3">
                             <h2>{language === 'en' ? 'Email' : 'Correo electrónico'}</h2>
                             <FontAwesomeIcon icon={faEnvelope} className="scale-110" />
                         </header>
                         {/* Email Title */}
-                        <div className="items-center gap-0 justify-between h-fit max-phone:w-[100%] flex max-phone:flex-col">
-                            {/* Email Input */}
-                            <h4 className="text-slate-400 dark:text-slate-200 text-center text-[4vw] my-[3vw]">{language === 'en' ? 'Here you have my email!' : 'Acá tenés mi correo electrónico!'}</h4>
+                        <div className="items-center gap-0 justify-between h-fit max-phone:w-[100%] flex-col max-phone:flex-col max-phone:mt-[3.5vw] max-phone:mb-[1vw]">
                             <a
                                 href="mailto:marcosdamian054@gmail.com"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="w-full flex-col flex justify-center items-center text-center"
                             >
-                                <input
-                                    className="dark:bg-black max-phone:w-[80%] bg-white px-4 py-3 outline-none w-full mr-[4vw] text-black font-semibold dark:text-white dark:font-semibold rounded-lg border-[0.15vw] text-center transition-colors duration-100 border-solid border-black focus:border-[#818cf8]"
-                                    type="text"
-                                    defaultValue="marcosdamian054@gmail.com"
-                                    readOnly
-                                />
+                                <button className="relative group border-none bg-transparent p-0 outline-none cursor-pointer font-mono font-light text-base w-[80%]">
+                                    <span className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-25 rounded-[2vw] transform translate-y-0.5 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:translate-y-1 group-hover:duration-[250ms] group-active:translate-y-px" />
+                                    <span className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-l from-[hsl(217,33%,16%)] via-[hsl(219,20%,16%)] to-[hsl(217,33%,16%)]" />
+                                    <div className="relative flex items-center justify-between py-3 px-6 text-lg text-white rounded-lg transform -translate-y-1 bg-gradient-to-r from-[hsl(218,38%,19%)] via-[hsl(217,33%,32%)] to-[hsl(218,38%,19%)] gap-3 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:-translate-y-1.5 group-hover:duration-[250ms] group-active:-translate-y-0.5 brightness-100 group-hover:brightness-110">
+                                        <span className="select-none"><p className="font-sans font-medium">marcosdamian054@gmail.com</p></span>
+                                        <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 ml-2 -mr-1 transition duration-250 group-hover:translate-x-1">
+                                            <path clipRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fillRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
                             </a>
                             {/* Email Input */}
                             {/* Email Buttons */}
