@@ -230,7 +230,12 @@ const Home = () => {
 
                         {/* Botones normales que solo se muestran cuando la sidebar está cerrada */}
                         <div className={`max-phone:hidden ${isSidebarOpen ? 'hidden' : ''}`}>
-                            <LanguageToggleButton toggleLanguage={toggleLanguage} language={language} />
+                            <button
+                                onClick={toggleLanguage}
+                                className="w-full max-phone:fit relative max-phone:text-[7vw] px-4 py-2 active:bg-slate-100 hover:scale-105 dark:hover:scale-105 dark:active:scale-100 text-gray-700 font-bold  dark:border-gray-700 border-gray-200 border-2 rounded-md shadow-md dark:text-white dark:hover:bg-slate-700  hover:border-gray-300 hover:border-2 transition duration-300 group"
+                            >
+                                {language === 'en' ? 'Cambiar idioma al Español' : 'Switch language to English'}
+                            </button>
                         </div>
                         <button
                             className={`max-phone:hidden tablet:mr-10 py-2 px-2 phone:py-5 flex items-end gap-4 outline-none ${isSidebarOpen ? 'hidden' : ''}`}
@@ -723,41 +728,34 @@ const Home = () => {
 
 
                     {/* Email section start */}
-                    <section className="px-[0vw] w-full max-phone:flex max-phone:flex-col max-phone:items-center">
+                    <section className="px-[0vw] flex-col items-center justify-center w-full max-phone:flex max-phone:flex-col max-phone:items-center">
                         {/* Email Title */}
-                        <header className="font-bold text-3xl max-phone:text-[7vw] text-indigo-400 dark:text-gray-100 mb-[3vw] flex max-phone:justify-center justify-center max-[220px]:pl-5 items-center gap-3">
+                        <header className="font-bold text-3xl max-phone:text-[7vw] text-indigo-400 dark:text-gray-100 mb-[3vw] flex max-phone:justify-center justify-center max-phone:pl-5 items-center gap-3">
                             <h2>{language === 'en' ? 'Email' : 'Correo electrónico'}</h2>
                             <FontAwesomeIcon icon={faEnvelope} className="scale-110" />
                         </header>
-                        {/* Email Title */}
-                        <div className="items-center gap-0 justify-between h-fit max-phone:w-[100%] flex-col max-phone:flex-col max-phone:mt-[3.5vw] max-phone:mb-[1vw]">
-                            <a
-                                href="mailto:marcosdamian054@gmail.com"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="w-full flex-col flex justify-center items-center text-center"
-                            >
-                                <button className="relative group border-none bg-transparent p-0 outline-none cursor-pointer font-mono font-light text-base w-[80%]">
-                                    <span className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-25 rounded-[2vw] transform translate-y-0.5 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:translate-y-1 group-hover:duration-[250ms] group-active:translate-y-px" />
-                                    <span className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-l from-[hsl(217,33%,16%)] via-[hsl(219,20%,16%)] to-[hsl(217,33%,16%)]" />
-                                    <div className="relative flex items-center justify-between py-3 px-6 text-lg text-white rounded-lg transform -translate-y-1 bg-gradient-to-r from-[hsl(218,38%,19%)] via-[hsl(217,33%,32%)] to-[hsl(218,38%,19%)] gap-3 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:-translate-y-1.5 group-hover:duration-[250ms] group-active:-translate-y-0.5 brightness-100 group-hover:brightness-110">
-                                        <span className="select-none"><p className="font-sans font-medium">marcosdamian054@gmail.com</p></span>
-                                        <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 ml-2 -mr-1 transition duration-250 group-hover:translate-x-1">
-                                            <path clipRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fillRule="evenodd" />
-                                        </svg>
-                                    </div>
-                                </button>
-                            </a>
-                            {/* Email Input */}
-                            {/* Email Buttons */}
-                            <div className="max-phone:h-[70%] flex items-center justify-end h-fit w-fit max-phone:w-full">
-                                {/* Send email button */}
-
-                                {/* Send email button */}
-                            </div>
-
-                            {/* Email Buttons */}
+                        {/* Contenedor del botón */}
+                        <div className="flex items-center gap-0 justify-center w-full max-phone:w-[120%] max-phone:flex-col max-phone:mt-[3.5vw] max-phone:mb-[1vw]">
+                            {/* Elemento Button */}
+                            <button className="relative group border-none bg-transparent p-0 outline-none cursor-pointer font-mono font-light text-base">
+                                <a
+                                    href="mailto:marcosdamian054@gmail.com"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="w-full flex-col flex justify-center items-center text-center"
+                                >
+                                <span className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-25 rounded-lg transform translate-y-0.5 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:translate-y-1 group-hover:duration-[250ms] group-active:translate-y-px" />
+                                <span className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-l from-[hsl(217,52%,5%)] via-[hsl(219,33%,25%)] to-[hsl(216,59%,7%)]" />
+                                <div className="relative flex items-center justify-between py-3 px-6 text-lg text-white rounded-lg transform -translate-y-1 bg-gradient-to-r from-[hsl(218,38%,19%)] via-[hsl(217,33%,32%)] to-[hsl(218,38%,19%)] gap-3 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:-translate-y-1.5 group-hover:duration-[250ms] group-active:-translate-y-0.5 brightness-100 group-hover:brightness-110">
+                                    <span className="select-none"><p className="font-sans font-medium">marcosdamian054@gmail.com</p></span>
+                                    <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 ml-2 -mr-1 transition duration-250 group-hover:translate-x-1">
+                                        <path clipRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fillRule="evenodd" />
+                                    </svg>
+                                </div> 
+                                </a>
+                            </button>
                         </div>
+                        {/* Email Input */}
                     </section>
                     {/* Email section end*/}
                 </main>
