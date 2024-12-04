@@ -38,8 +38,8 @@ const Home = () => {
     })
 
     const [scrollPast, setScrollPast] = useState(false);
-    const [tooltipText, setTooltipText] = useState(`${language === 'en' ? "Click to copy my email" : 'Haz click para copiar mi email'}`);
-    const [showTooltip, setShowTooltip] = useState(false);
+    /* const [tooltipText, setTooltipText] = useState(`${language === 'en' ? "Click to copy my email" : 'Haz click para copiar mi email'}`); */
+    /* const [showTooltip, setShowTooltip] = useState(false); */
 
 
 
@@ -77,7 +77,7 @@ const Home = () => {
     const bounceInStyle = {
         animation: 'bounceIn 1s forwards',
     };
-    const textToClipboard = () => {
+    /* const textToClipboard = () => {
         copy(copiedText)
             .then(() => {
                 setTooltipText(language === 'en' ? "Email copied successfully!" : 'Email copiado exitosamente');
@@ -92,7 +92,7 @@ const Home = () => {
                     setTooltipText(language === 'en' ? 'Click to copy my email' : 'Haz click para copiar mi email');
                 }, 3000);
             });
-    };
+    }; */
 
     // Estado para manejar la visibilidad de la sidebar
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -114,7 +114,7 @@ const Home = () => {
                     <div style={scrollPast ? bounceInStyle : null} className={`tablet:ml-10 flex items-center font-semibold text-lg text-center text-slate-600 dark:text-slate-300 transform transition-all duration-400 ${scrollPast ? '' : 'opacity-0'}`}>
 
                         {/* Navbar profile pic circle start */}
-                        <div className={`ml-2 shrink-0 flex w-12 h-12 mr-3 relative opacity-0 items-center dark:bg-gray-700/60 rounded-full border-2 shadow-indigo-600 border-black overflow-hidden dark:shadow-slate-700 dark:shadow-2xl dark:bg-none dark:border-black  ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
+                        <div className={`ml-2 shrink-0 flex w-12 h-12 mr-3 relative opacity-0 items-center dark:bg-gray-700/60 rounded-full shadow-sm shadow-indigo-200 border-black overflow-hidden dark:shadow-indigo-300 dark:shadow-sm dark:bg-none dark:border-black  ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
                             <span className="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
                                 {/* Navbar profile pic start */}
                                 <img className="rounded-full drop-shadow-2xl" src={ProfilePic} />
@@ -267,7 +267,7 @@ const Home = () => {
                     <section className="px-[8vw] flex flex-col tablet:flex-column items-center gap-5 shrink-0" >
 
                         {/* Profile Pic */}
-                        <div className="shrink-0 relative max-phone:w-[45vw] max-phone:h-[45vw] w-[35%] h-[35%] bg-none shadow-lg border-4 shadow-indigo-400 border-black rounded-full overflow-hidden dark:shadow-indigo-950 dark:drop-shadow-2xl dark:bg-none dark:border-black ">
+                        <div className="shrink-0 relative max-phone:w-[45vw] max-phone:h-[45vw] w-[35%] h-[35%] bg-none shadow-lg shadow-indigo-300 rounded-full overflow-hidden dark:shadow-indigo-300 dark:shadow-lg dark:bg-none">
                             <span>
                                 <img className="aspect-square" alt="Profile picture" src={ProfilePic} />
                             </span>
@@ -279,7 +279,7 @@ const Home = () => {
 
                             {/* Presentation title */}
                             <div className="flex flex-col items-center gap-2 max-w-[90%] mt-1">
-                                <h1 className="shrink-0 text-3xl max-phone:text-[9vw] my-6 text-center font-bold text-slate-600 dark:text-slate-100 max-phone:leading-[10vw]">Marcos Damián E. Medina</h1>
+                                <h1 className="shrink-0 text-3xl max-phone:text-[9vw] my-6 text-center font-bold text-slate-600 dark:text-slate-100 max-phone:leading-[10vw]">Damián Medina "DamiDev"</h1>
                                 <p className="shrink-0 mt-3 text-center hyphens-auto text-slate-700 text-2xl max-phone:text-[9vw] dark:text-slate-200 max-w-full font-Jersey10PixelFont">{language === 'en' ? 'Welcome!' : '¡Bienvenidos!'}</p>
                                 <p className="shrink-0 text-center text-slate-700 text-lg max-phone:text-[6vw] max-phone:font-light dark:text-slate-300 max-w-full w-full h-fit rounded-2xl max-phone:mt-5 max-phone:mb-10 max-phone:leading-[8vw] max-phone:tracking-wide mt-2">{language === 'en' ? 'I am passionate about web development, focused on the integration of social networks' : 'Soy un apasionado del desarrollo de páginas web, enfocado en la integración de redes sociales'}</p>
                             </div>
