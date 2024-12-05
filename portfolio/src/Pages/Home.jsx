@@ -1,15 +1,16 @@
+/* CSS */
+import "../index.css";
+
+/* Dependencies */
 import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import copy from 'clipboard-copy';
-import { faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy } from '@fortawesome/free-solid-svg-icons'
+/* import copy from 'clipboard-copy'; */
+
+/* Icons */
+import { faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy, faDownload, faLanguage } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import sunThemeIcon from '../assets/sunThemeIcon.svg'
-import ProfilePic from '../assets/ProfilePic.jpg'
-import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
-import HenrySquareIcon from '../assets/HenrySquareIcon.png'
-import MuniaLoginPic from '../assets/MuniaLoginPic.jpg'
-import ClimateDuckyScreenshot from '../assets/ClimateDuckyScreenshot.png'
-import IngeniumFinishedTrailer from '../assets/IngeniumWebVideo/IngeniumFinishedTrailer.webm'
+import moonThemeIcon from '../assets/moonThemeIcon.svg'
 import tailwindIcon from "../assets/CompaniesIcons/tailwind-svgrepo-com.svg";
 import HTML5Icon from "../assets/CompaniesIcons/html-5-svgrepo-com.svg";
 import MongoDBIcon from "../assets/CompaniesIcons/mongo-svgrepo-com.svg";
@@ -20,16 +21,36 @@ import framerDarkIcon from "../assets/CompaniesIcons/Framer_dark.svg";
 import ThreeJSDarkIcon from '../assets/CompaniesIcons/Three.js_dark.svg'
 import ThreeJSIcon from '../assets/CompaniesIcons/Three.js_light.svg'
 import BlenderIcon from '../assets/CompaniesIcons/BlenderIcon.svg'
-import "../index.css";
-import TooltipButton from "../components/TooltipButton";
+import LanguageIcon from '../assets/LanguageIcon.svg'
+import LanguageDarkIcon from '../assets/LanguageDarkIcon.svg'
+
+/* Images */
+import HenrySquareIcon from '../assets/HenrySquareIcon.png'
+import ProfilePic from '../assets/ProfilePic.jpg'
+import MuniaLoginPic from '../assets/MuniaLoginPic.jpg'
+import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
+import ClimateDuckyScreenshot from '../assets/ClimateDuckyScreenshot.png'
 import HenryCertificate from '../assets/Henry certificate.jpg'
+
+/* Videos */
+import IngeniumFinishedTrailer from '../assets/IngeniumWebVideo/IngeniumFinishedTrailer.webm'
+
+/* PDF */
+import Resume from '../assets/Resume.pdf'
+
+/* Components */
+import TooltipButton from "../components/TooltipButton";
 import LanguageToggleButton from "../components/LanguageToggleButton";
 
+
 const Home = () => {
+    /* Language toggle */
     const [language, setLanguage] = useState('es'); // Idioma por defecto es Español
     const toggleLanguage = () => {
         setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'es' : 'en'));
     };
+
+    /* Color theme */
     const [theme, setTheme] = useState(() => {
         if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
             return "dark";
@@ -37,14 +58,16 @@ const Home = () => {
         return "light";
     })
 
+    /* Navbar scroll animation */
     const [scrollPast, setScrollPast] = useState(false);
+
     /* const [tooltipText, setTooltipText] = useState(`${language === 'en' ? "Click to copy my email" : 'Haz click para copiar mi email'}`); */
     /* const [showTooltip, setShowTooltip] = useState(false); */
 
+    /* Correo Damián */
+    /* const copiedText = 'marcosdamian054@gmail.com'; */
 
-
-    const copiedText = 'marcosdamian054@gmail.com';
-
+    /* Función scroll navbar */
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
@@ -74,6 +97,8 @@ const Home = () => {
     const handleChangeTheme = () => {
         setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
+
+    /* Animación barra de navegación scroll */
     const bounceInStyle = {
         animation: 'bounceIn 1s forwards',
     };
@@ -93,14 +118,6 @@ const Home = () => {
                 }, 3000);
             });
     }; */
-
-    // Estado para manejar la visibilidad de la sidebar
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-    // Función para manejar el cambio del checkbox
-    const handleSidebarToggle = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
 
     return (
         <div className="flex flex-col items-center">
@@ -130,127 +147,65 @@ const Home = () => {
                     {/* Navbar profile pic logo end */}
 
                     {/* Navbar profile theme & Language button start */}
-                    <div className="flex items-center">
-                        {/* Checkbox y botón para abrir/cerrar la sidebar */}
-                        {theme === 'light' ?
-                            <label className="phone:hidden pr-3 z-20">
-                                <div className="aspect-square w-10 max-phone:w-[7vw] max-phone:h-[7vw] cursor-pointer flex flex-col items-center justify-center">
-                                    <input
-                                        className="hidden peer"
-                                        type="checkbox"
-                                        onChange={handleSidebarToggle}
-                                        checked={isSidebarOpen}
-                                    />
-                                    {/* Líneas del ícono hamburguesa */}
-                                    {/* Burger sideBar Icon */}
-                                    < svg className={`absolute max-phone:w-[7vw] transition-opacity ease-in-out ${isSidebarOpen ? 'opacity-0' : 'opacity-100'}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                        <g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#344454" stroke-width="2" stroke-linecap="round" /> <path d="M4 12L20 12" stroke="#344454" stroke-width="2" stroke-linecap="round" /> <path d="M4 6L20 6" stroke="#344454" stroke-width="2" stroke-linecap="round" /> </g>
-                                    </svg>
-                                    {/* Cross sideBar Icon */}
-                                    <svg className={`absolute max-phone:w-[7vw] transition-opacity ease-in-out ${isSidebarOpen ? 'opacity-100' : 'opacity-0'} `} viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                        <g id="SVGRepo_iconCarrier"> <path d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z" fill="#344454" /> </g>
-                                    </svg>
-                                </div>
-                            </label>
-                            :
-                            <label className="phone:hidden pr-3 z-20">
-                                <div className="aspect-square w-10 max-phone:w-[7vw] max-phone:h-[7vw] cursor-pointer flex flex-col items-center justify-center">
-                                    <input
-                                        className="hidden peer"
-                                        type="checkbox"
-                                        onChange={handleSidebarToggle}
-                                        checked={isSidebarOpen}
-                                    />
-                                    {/* Líneas del ícono hamburguesa */}
-                                    {/* Burger sideBar Icon */}
-                                    < svg className={`absolute max-phone:w-[7vw] transition-opacity ease-in-out ${isSidebarOpen ? 'opacity-0' : 'opacity-100'}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                        <g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#f3f4f6" stroke-width="2" stroke-linecap="round" /> <path d="M4 12L20 12" stroke="#f3f4f6" stroke-width="2" stroke-linecap="round" /> <path d="M4 6L20 6" stroke="#f3f4f6" stroke-width="2" stroke-linecap="round" /> </g>
-                                    </svg>
-                                    {/* Cross sideBar Icon */}
-                                    <svg className={`absolute max-phone:w-[7vw] transition-opacity ease-in-out ${isSidebarOpen ? 'opacity-100' : 'opacity-0'} `} viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                        <g id="SVGRepo_iconCarrier"> <path d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z" fill="#f3f4f6" /> </g>
-                                    </svg>
-                                </div>
-                            </label>
-                        }
-
-                        {/* Sidebar con botones de idioma y tema */}
-                        {isSidebarOpen && (
-                            /* Sidebar container */
-                            <div className={`absolute top-0 right-0 w-fit h-fit bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-sm shadow-lg z-10 px-5 rounded-bl-3xl transform transition-transform duration-1000 ease-in-out origin-right`}>
-
-                                <section className="flex flex-col items-center gap-4">
-                                    {/* "Settings" title */}
-                                    <p className="mt-4 max-phone:text-[7vw] dark:text-gray-100 text-slate-700 font-bold">{language === "en" ? "Settings" : 'Ajustes'}</p>
-
-                                    <hr className="border-1 w-full h-0 border-gray-600" />
-                                    {/* Botón de cambiar tema */}
-                                    <button
-                                        className="w-fit max-phone:w-[100%] flex items-center gap-4 outline-none dark:border-gray-700 dark:border-2 border-2 border-gray-200 shadow-md rounded-md"
-                                        onClick={handleChangeTheme}
-                                    >
-                                        <div className="dark:hidden flex justify-between w-fit items-center">
-                                            {/* Color theme title text */}
-                                            <p className="w-full max-phone:text-[7vw] relative px-3 py-2 active:bg-slate-100 hover:scale-105 dark:hover:scale-105 dark:active:scale-100 text-black rounded-md shadow-md dark:text-white dark:hover:bg-slate-700 transition duration-300">{language === "en" ? "Switch to dark theme" : 'Cambiar a tema oscuro'}</p>
-
-                                            {/* Color theme button */}
-                                            <div className="text-3xl max-phone:text-[7vw] dark:hidden text-slate-700">
-                                                <FontAwesomeIcon icon={faMoon} />
-                                            </div>
-                                        </div>
-                                        <div className="hidden dark:flex dark:w-fit dark:items-center dark:gap-2">
-                                            {/* Color theme title text */}
-                                            <p className="w-full max-phone:text-[7vw] relative px-3 py-2 active:bg-slate-100 hover:scale-105 dark:hover:scale-105 dark:active:scale-100 text-black  rounded-md shadow-md dark:text-white dark:hover:bg-slate-700 transition duration-300">{language === "en" ? "Switch to light theme" : 'Cambiar a tema claro'}</p>
-
-                                            {/* Color theme button */}
-                                            <img className="h-8 max-phone:h-[5vw]" src={sunThemeIcon} alt="Clear theme button" />
-                                        </div>
-                                    </button>
-
-
-                                    {/* Botón de cambiar idioma */}
-                                    <div className="mb-4">
-                                        <LanguageToggleButton toggleLanguage={toggleLanguage} language={language} />
-                                    </div>
-
-
-                                </section>
-
-
-                            </div>
-                        )}
-
-                        {/* Botones normales que solo se muestran cuando la sidebar está cerrada */}
-                        <div className={`max-phone:hidden ${isSidebarOpen ? 'hidden' : ''}`}>
+                    <div className="flex items-center mr-[3vw]">
+                        <div className="hidden max-phone:flex max-phone:items-center gap-[3vw]">
                             <button
                                 onClick={toggleLanguage}
-                                className="w-full max-phone:fit relative max-phone:text-[7vw] px-4 py-2 active:bg-slate-100 hover:scale-105 dark:hover:scale-105 dark:active:scale-100 text-gray-700 font-bold  dark:border-gray-700 border-gray-200 border-2 rounded-md shadow-md dark:text-white dark:hover:bg-slate-700  hover:border-gray-300 hover:border-2 transition duration-300 group"
+                                className={`py-2 px-2 phone:py-5 flex items-end rounded gap-4 ${theme === 'dark' ? "active:bg-slate-700" : "active:bg-slate-200"} outline-none`}
                             >
-                                {language === 'en' ? 'Cambiar idioma al Español' : 'Switch language to English'}
+                                {theme === 'dark' ?
+                                    <img className="h-[10vw]" src={LanguageIcon} alt="Dark theme toggle button" />
+                                    :
+                                    <img className="h-[10vw]" src={LanguageDarkIcon} alt="Light theme toggle button" />
+                                }
+                            </button>
+                            <button
+                                className={`tablet:mr-10 py-[1vw] px-2 rounded max-phone:py-[0.2vw] flex items-end gap-4 ${theme === 'dark' ? "active:bg-slate-700" : "active:bg-slate-200"} outline-none`}
+                                onClick={handleChangeTheme}
+                            >
+                                {theme === 'dark' ?
+                                    <div className="flex-nowrap dark:block">
+                                        <img className="h-[14vw]" src={sunThemeIcon} alt="Clear theme button" />
+                                    </div>
+                                    :
+                                    <div className="flex-nowrap dark:block">
+                                        <img className="h-[14vw]" src={moonThemeIcon} alt="Clear theme button" />
+                                    </div>
+                                }
                             </button>
                         </div>
-                        <button
-                            className={`max-phone:hidden tablet:mr-10 py-2 px-2 phone:py-5 flex items-end gap-4 outline-none ${isSidebarOpen ? 'hidden' : ''}`}
-                            onClick={handleChangeTheme}
-                        >
-                            <div className="text-4xl flex-nowrap ml-3 dark:hidden text-slate-700">
-                                <FontAwesomeIcon icon={faMoon} />
-                            </div>
-                            <div className="flex-nowrap hidden dark:block">
-                                <img className="h-10" src={sunThemeIcon} alt="Clear theme button" />
-                            </div>
-                        </button>
+
+                        {/* Botones normales que solo se muestran cuando la sidebar está cerrada */}
+                        <div className="max-phone:hidden flex gap-[1vw]">
+
+                            <button
+                                onClick={toggleLanguage}
+                                className={`py-0 px-2 phone:py-5 flex items-end gap-4 rounded  ${theme === 'dark' ? "hover:bg-slate-700 active:bg-slate-600" : "hover:bg-slate-300 active:bg-slate-200"} outline-none`}
+                            >
+                                {theme === 'dark' ?
+                                    <img className="h-[3vw]" src={LanguageIcon} alt="Dark theme toggle button" />
+                                    :
+                                    <img className="h-[3vw]" src={LanguageDarkIcon} alt="Light theme toggle button" />
+                                }
+                            </button>
+                            <button
+                                className={`tablet:mr-10 py-[1vw] rounded px-2 max-phone:py-5 flex items-end ${theme === 'dark' ? "hover:bg-slate-700 active:bg-slate-600" : "hover:bg-slate-300 active:bg-slate-200"} outline-none`}
+                                onClick={handleChangeTheme}
+                            >
+                                {theme === 'dark' ?
+                                    <div className="flex-nowrap dark:block">
+                                        <img className="h-[4vw]" src={sunThemeIcon} alt="Clear theme button" />
+                                    </div>
+                                    :
+                                    <div className="flex-nowrap dark:block">
+                                        <img className="h-[4vw]" src={moonThemeIcon} alt="Clear theme button" />
+                                    </div>
+                                }
+                            </button>
+                        </div>
+
                     </div>
                     {/* Navbar profile theme & Language button end */}
-
 
                 </header>
                 {/* Navbar content container end */}
@@ -261,7 +216,6 @@ const Home = () => {
             {/* Main start */}
             <div className={` max-w-4xl flex-col mb-5 flex gap-10 overflow-x-hidden overflow-y-hidden`}>
                 <main className="flex flex-col gap-12">
-
 
                     {/* Hero presentation start */}
                     <section className="px-[8vw] flex flex-col tablet:flex-column items-center gap-5 shrink-0" >
@@ -325,7 +279,7 @@ const Home = () => {
                                     buttonFlexProps="justify-center items-center  grow"
                                 />
                                 <TooltipButton
-                                    link="https://github.com/Marcos1D9"
+                                    link="https://github.com/DamiD3v"
                                     mainText="Github"
                                     tooltipSpan={language === 'en' ? 'Click here if you are a developer ;)' : "Click acá si sos un desarrollador"}
                                     githubIcon={faGithub}
@@ -361,6 +315,20 @@ const Home = () => {
                                     buttonHeight="h-14"
                                     buttonFlexProps="justify-center items-center  grow"
                                 />
+                                <button className="relative inline-flex max-phone:w-full max-phone:h-[20vw] h-16 w-full active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+                                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#6100ff_0%,#9100ffea_50%,#cb00ff_100%)]">
+                                    </span>
+                                    <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-transparent px-7 text-[1.3vw] max-phone:text-[5vw] font-medium text-white backdrop-blur-3xl gap-4 undefined tracking-tight leading-[5vw]">
+                                        <a
+                                            className="[filter:drop-shadow(0px_2px_1px_#999999)]"
+                                            href={`https://drive.google.com/file/d/1MLKcXyPlY6fpJL0E3nKLgOqVFGGkPNgP/view?usp=sharing`}
+                                            target="_blank"
+                                        >
+                                            {language === 'en' ? "Open my resume (PDF)" : "Mirá mi CV (PDF)"}
+                                        </a>
+                                        <FontAwesomeIcon icon={faDownload} />
+                                    </span>
+                                </button>
                             </div>
                             {/* Social media & certificate Buttons end */}
 
@@ -374,7 +342,6 @@ const Home = () => {
                     </section>
                     {/* Hero presentation end */}
                     <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
-
 
                     {/* Experience section start */}
                     <section className="px-[8vw] w-full flex flex-col items-center shrink-0 mt-3 mb-3" id="hero-section">
@@ -434,7 +401,6 @@ const Home = () => {
                     {/* Experience section end*/}
                     <hr className="px-10 min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
-
                     {/* Projects section start */}
                     <section className="w-full max-phone:w-[fit] flex flex-col items-center mt-2">
 
@@ -455,7 +421,7 @@ const Home = () => {
 
 
                                 {/* Munia project container*/}
-                                <article className="relative flex flex-col justify-between w-full mt-4 mb-20 max-phone:mb-6">
+                                <article className="relative flex flex-col justify-between w-full mt-4 max-phone:mb-6">
                                     {/* Munia project description */}
                                     <div className="flex flex-col items-center">
                                         <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[7.5vw] text-center font-bold">{language === 'en' ? 'Munia sessions 1:1' : 'Munia Sesiones 1:1'}</h2>
@@ -484,7 +450,7 @@ const Home = () => {
                                     <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2 max-phone:flex max-phone:flex-col max-phone:items-center">{language === 'en' ? '(Must contact Munia for register)' : '(Debe contactar con Munia para registrarse)'}</p>
 
                                     {/* Munia project redirect button */}
-                                    <div className="flex flex-row mb-3">
+                                    <div className="flex flex-row mb-0 items-center justify-center mt-6">
                                         <TooltipButton
                                             link="https://munia.co/"
                                             mainText={`${language === 'en' ? 'Main official website' : 'Sitio web oficial'}`}
@@ -500,16 +466,16 @@ const Home = () => {
                                             pointerBorder="dark:border-[#9c6e61] border-2 border-zinc-600"
                                             buttonXPadding="px-6 max-phone:py-[3%]"
                                             buttonHeight="h-10 max-phone:h-full"
-                                            buttonWidth="w-full"
-                                            buttonFlexProps="justify-center items-center"
+                                            buttonWidth="w-[85%] max-phone:w-[100%]"
+                                            buttonFlexProps="justify-center items-center active:scale-95 transition"
                                         />
                                     </div>
                                     {/* Munia project redirect button */}
                                     {/* Munia project technologies icons */}
 
                                     {/* Munia project login image */}
-                                    <a href="https://users.munia.co/sign-in" target="_blank" rel="noreferrer" className="max-phone:min-w-0 block group rounded-2xl shadow_translate-transition hover:shadow-2xl hover:shadow-orange-200 active:shadow-orange-300 active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-orange-200 dark:active:shadow-orange-300 max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-orange-200 max-phone:shadow-orange-200">
-                                        <img className="aspect-video rounded-2xl h-30" src={MuniaLoginPic} alt="MuniaLoginPic" />
+                                    <a href="https://users.munia.co/sign-in" target="_blank" rel="noreferrer" className="max-phone:min-w-0 h-fit w-[85%] max-phone:w-[100%] mx-auto my-8 group rounded-2xl shadow_translate-transition hover:shadow-2xl hover:shadow-orange-200 active:shadow-orange-300 active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-orange-200 dark:active:shadow-orange-300 max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-orange-200 max-phone:shadow-orange-200">
+                                        <img className="aspect-auto rounded-2xl" src={MuniaLoginPic} alt="MuniaLoginPic" />
                                     </a>
                                     {/* Munia project login image */}
 
@@ -519,7 +485,7 @@ const Home = () => {
                                 <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
                                 {/* Grow-Up project container*/}
-                                <article className="relative flex flex-col justify-between w-full mb-20 max-phone:mb-6">
+                                <article className="relative flex flex-col justify-between w-full max-phone:mb-6">
                                     <div className="flex flex-col items-center">
                                         <h2 className="text-gray-700 text-center mr-2 dark:text-gray-200 text-2xl max-phone:text-[7vw] font-bold">{language === 'en' ? '"Grow-Up" Books E-commerce' : 'Tienda de libros en línea'}</h2>
                                         <h2 className="text-gray-700 text-center mr-2 dark:text-gray-200 text-2xl max-phone:text-[7vw] font-bold">{language === 'en' ? '' : '"Grow-Up"'}</h2>
@@ -551,10 +517,10 @@ const Home = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? '(Click on the button with the text "Youtube" for full screen)' : '(Click en el botón con el texto "Youtube" para pantalla completa)'}</p>
+                                    <p className="text-slate-900 dark:text-slate-400 mb-10 mt-2">{language === 'en' ? '(Click on the button with the text "Youtube" for full screen)' : '(Click en el botón con el texto "Youtube" para pantalla completa)'}</p>
                                     {/* Project technologies icons */}
-                                    <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" className="block group hover:shadow-2xl hover:shadow-[#84a4ac] active:shadow-[#92BBC7] active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-[#84a4ac] dark:active:shadow-[#92BBC7] max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-[#84a4ac] max-phone:shadow-[#84a4ac] rounded-xl">
-                                        <iframe className="aspect-video rounded-xl" width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                                    <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" className="h-fit w-[85%] max-phone:w-[100%] mx-auto mb-4 group hover:shadow-2xl hover:shadow-[#84a4ac] active:shadow-[#92BBC7] active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-[#84a4ac] dark:active:shadow-[#92BBC7] max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-[#84a4ac] max-phone:shadow-[#84a4ac] rounded-xl">
+                                        <iframe className="aspect-video rounded-xl" width="100%" height="100%" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                                     </a>
                                 </article>
                                 {/* Grow-Up project container*/}
@@ -600,7 +566,7 @@ const Home = () => {
                                     {/* <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? '(Must contact Munia for register)' : '(Debe contactar con Munia para registrarse)'}</p> */}
 
                                     {/* Climate-Ducky redirect button */}
-                                    <div className="flex flex-row mb-3 text-2xl">
+                                    <div className="flex flex-row mb-3 text-2xl justify-center">
                                         <TooltipButton
                                             link="https://climate-ducky.vercel.app/"
                                             mainText={language === 'en' ? 'Visit Climate Ducky now!' : '¡Visita Climate Ducky ahora!'}
@@ -614,18 +580,18 @@ const Home = () => {
                                             hoverButtonBorderColor="dark:hover:border-sky-300 hover:border-sky-400 active:border-sky-300"
                                             pointerBackground="dark:bg-gray-800 bg-sky-400"
                                             pointerBorder="dark:border-sky-300 border-2 border-sky-500"
-                                            buttonXPadding="px-6 py-7 max-phone:py-[3%]"
+                                            buttonXPadding="px-6 py-6 max-phone:py-[3%]"
                                             buttonHeight="h-10 max-phone:h-full"
-                                            buttonWidth="w-full"
-                                            buttonFlexProps="justify-center items-center"
+                                            buttonWidth="w-[85%] max-phone:w-[100%]"
+                                            buttonFlexProps="justify-center items-center active:scale-95 transition"
                                         />
                                     </div>
                                     {/* Climate-Ducky redirect button */}
                                     {/* Climate-Ducky technologies icons */}
 
                                     {/* Climate-Ducky login image */}
-                                    <a href="https://climate-ducky.vercel.app/" target="_blank" rel="noreferrer" className="max-phone:min-w-0 block rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-sky-300 max-phone:shadow-sky-300 dark:hover:shadow-sky-300 hover:shadow-2xl hover:shadow-sky-300 active:shadow-2xl active:shadow-sky-400">
-                                        <img className="aspect-video rounded-2xl h-30" src={ClimateDuckyScreenshot} alt="MuniaLoginPic" />
+                                    <a href="https://climate-ducky.vercel.app/" target="_blank" rel="noreferrer" className="max-phone:min-w-0 h-fit w-[85%] max-phone:w-[100%] mx-auto rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-sky-300 max-phone:shadow-sky-300 dark:hover:shadow-sky-300 hover:shadow-2xl hover:shadow-sky-300 active:shadow-2xl active:shadow-sky-400">
+                                        <img className="aspect-auto rounded-2xl" src={ClimateDuckyScreenshot} alt="MuniaLoginPic" />
                                     </a>
                                     {/* Climate-Ducky login image */}
                                 </article>
@@ -682,7 +648,7 @@ const Home = () => {
                                     {/* <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? '(Must contact Munia for register)' : '(Debe contactar con Munia para registrarse)'}</p> */}
 
                                     {/* Ingenium redirect button */}
-                                    <div className="flex flex-row mb-3 text-xl">
+                                    <div className="flex flex-row mb-0 text-xl justify-center">
                                         <TooltipButton
                                             link="https://www.ingenium.net.ar/"
                                             mainText={language === 'en' ? "Visit the website now!" : '¡Visita la web ahora!'}
@@ -698,8 +664,8 @@ const Home = () => {
                                             pointerBorder="dark:border-blue-300 border-2 border-blue-500"
                                             buttonXPadding="px-6 max-phone:py-[3%]"
                                             buttonHeight="h-10 max-phone:h-full"
-                                            buttonWidth="w-full"
-                                            buttonFlexProps="justify-center items-center"
+                                            buttonWidth="w-[85%] max-phone:w-[100%]"
+                                            buttonFlexProps="justify-center items-center active:scale-95 transition"
                                         />
                                     </div>
                                     {/* Ingenium redirect button */}
@@ -707,8 +673,8 @@ const Home = () => {
                                     {/* Ingenium technologies icons */}
 
                                     {/* Ingenium Trailer video */}
-                                    <div className="max-phone:min-w-0 block aspect-video     rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-blue-300 max-phone:shadow-blue-300 dark:hover:shadow-blue-300 hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-400">
-                                        <video className="aspect-video rounded-2xl h-30" src={IngeniumFinishedTrailer} controls="true" muted="true" alt="MuniaLoginPic" />
+                                    <div className="max-phone:min-w-0 aspect-auto h-fit w-[85%] max-phone:w-[100%] mx-auto my-10 rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-blue-300 max-phone:shadow-blue-300 dark:hover:shadow-blue-300 hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-400">
+                                        <video className="aspect-auto rounded-2xl" src={IngeniumFinishedTrailer} controls={true} muted={true} alt="MuniaLoginPic" />
                                     </div>
                                     {/* Ingenium Trailer video */}
                                 </article>
@@ -726,34 +692,30 @@ const Home = () => {
 
                     {/* Projects section end */}
 
-
+                    <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
                     {/* Email section start */}
-                    <section className="px-[0vw] flex-col items-center justify-center w-full max-phone:flex max-phone:flex-col max-phone:items-center">
+                    <section className="px-[0vw] flex flex-col items-center justify-center w-full max-phone:flex max-phone:flex-col max-phone:items-center">
                         {/* Email Title */}
-                        <header className="font-bold text-3xl max-phone:text-[7vw] text-indigo-400 dark:text-gray-100 mb-[3vw] flex max-phone:justify-center justify-center max-phone:pl-5 items-center gap-3">
+                        <header className="font-bold text-3xl max-phone:text-[7vw] text-indigo-400 dark:text-gray-100 flex max-phone:justify-center justify-center max-phone:pl-5 items-center gap-3">
                             <h2>{language === 'en' ? 'Email' : 'Correo electrónico'}</h2>
                             <FontAwesomeIcon icon={faEnvelope} className="scale-110" />
                         </header>
                         {/* Contenedor del botón */}
-                        <div className="flex items-center gap-0 justify-center w-full max-phone:w-[120%] max-phone:flex-col max-phone:mt-[3.5vw] max-phone:mb-[1vw]">
-                            {/* Elemento Button */}
-                            <button className="relative group border-none bg-transparent p-0 outline-none cursor-pointer font-mono font-light text-base">
-                                <a
-                                    href="mailto:marcosdamian054@gmail.com"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="w-full flex-col flex justify-center items-center text-center"
-                                >
-                                <span className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-25 rounded-lg transform translate-y-0.5 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:translate-y-1 group-hover:duration-[250ms] group-active:translate-y-px" />
-                                <span className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-l from-[hsl(217,52%,5%)] via-[hsl(219,33%,25%)] to-[hsl(216,59%,7%)]" />
-                                <div className="relative flex items-center justify-between py-3 px-6 text-lg text-white rounded-lg transform -translate-y-1 bg-gradient-to-r from-[hsl(218,38%,19%)] via-[hsl(217,33%,32%)] to-[hsl(218,38%,19%)] gap-3 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:-translate-y-1.5 group-hover:duration-[250ms] group-active:-translate-y-0.5 brightness-100 group-hover:brightness-110">
-                                    <span className="select-none"><p className="font-sans font-medium">marcosdamian054@gmail.com</p></span>
-                                    <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 ml-2 -mr-1 transition duration-250 group-hover:translate-x-1">
-                                        <path clipRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fillRule="evenodd" />
-                                    </svg>
-                                </div> 
-                                </a>
-                            </button>
+                        <div className="w-[85%] flex flex-col items-center justify-center">
+                            <a href="mailto:marcosdamian054@gmail.com" target="_blank" className="relative flex-col items-center justify-center flex max-phone:w-[75%] max-phone:h-[14vw] h-[4.8vw] w-[100%] active:scale-95 transition overflow-hidden rounded-lg p-[1px] max-phone:mt-[10vw] max-phone:mb-[3vw] mt-[3vw] mb-[0.8vw] focus:outline-none">
+                                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#6100ff_0%,#9100ffea_50%,#cb00ff_100%)]">
+                                </span>
+                                <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-transparent px-7 text-lg max-phone:text-[5vw] font-medium text-white backdrop-blur-3xl gap-4 undefined tracking-tight leading-[5vw]">
+                                    <a
+                                        className="[filter:drop-shadow(0px_2px_1px_#999999)]"
+                                        href="mailto:marcosdamian054@gmail.com"
+                                        target="_blank"
+                                    >
+                                        {language === 'en' ? "Send me an email" : "Enviame un email"}
+                                    </a>
+                                    <FontAwesomeIcon icon={faPaperPlane} />
+                                </span>
+                            </a>
                         </div>
                         {/* Email Input */}
                     </section>

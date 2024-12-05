@@ -19,7 +19,11 @@ export default {
       laptop: '1024px',
     },
   },
+  daisyui:{
+    themes: [],
+  },
   plugins: [
+    require('daisyui'),
     require("@designbycode/tailwindcss-text-stroke"),
   ],
 }
