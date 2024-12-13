@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /* import copy from 'clipboard-copy'; */
 
 /* Icons */
-import { faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy, faDownload, faLanguage } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy, faDownload, faLanguage, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import sunThemeIcon from '../assets/sunThemeIcon.svg'
 import moonThemeIcon from '../assets/moonThemeIcon.svg'
@@ -23,6 +23,7 @@ import ThreeJSIcon from '../assets/CompaniesIcons/Three.js_light.svg'
 import BlenderIcon from '../assets/CompaniesIcons/BlenderIcon.svg'
 import LanguageIcon from '../assets/LanguageIcon.svg'
 import LanguageDarkIcon from '../assets/LanguageDarkIcon.svg'
+import portfolioIcon from '../../public/portfolioIcon.svg'
 
 /* Images */
 import HenrySquareIcon from '../assets/HenrySquareIcon.png'
@@ -31,12 +32,13 @@ import MuniaLoginPic from '../assets/MuniaLoginPic.jpg'
 import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
 import ClimateDuckyScreenshot from '../assets/ClimateDuckyScreenshot.png'
 import HenryCertificate from '../assets/Henry certificate.jpg'
+import EnglishCertificate from '../assets/Certificado Inglés C1.jpg'
 
 /* Videos */
 import IngeniumFinishedTrailer from '../assets/IngeniumWebVideo/IngeniumFinishedTrailer.webm'
 
 /* PDF */
-import Resume from '../assets/Resume.pdf'
+import Diploma from '../assets/Diploma programador.jpg'
 
 /* Components */
 import TooltipButton from "../components/TooltipButton";
@@ -149,6 +151,7 @@ const Home = () => {
                     {/* Navbar profile theme & Language button start */}
                     <div className="flex items-center mr-[3vw]">
                         <div className="hidden max-phone:flex max-phone:items-center gap-[3vw]">
+                            {/* Android buttons */}
                             <button
                                 onClick={toggleLanguage}
                                 className={`py-2 px-2 phone:py-5 flex items-end rounded gap-4 ${theme === 'dark' ? "active:bg-slate-700" : "active:bg-slate-200"} outline-none`}
@@ -175,7 +178,7 @@ const Home = () => {
                             </button>
                         </div>
 
-                        {/* Botones normales que solo se muestran cuando la sidebar está cerrada */}
+                        {/* Desktop buttons*/}
                         <div className="max-phone:hidden flex gap-[1vw]">
 
                             <button
@@ -183,9 +186,9 @@ const Home = () => {
                                 className={`py-0 px-2 phone:py-5 flex items-end gap-4 rounded  ${theme === 'dark' ? "hover:bg-slate-700 active:bg-slate-600" : "hover:bg-slate-300 active:bg-slate-200"} outline-none`}
                             >
                                 {theme === 'dark' ?
-                                    <img className="h-[3vw]" src={LanguageIcon} alt="Dark theme toggle button" />
+                                    <img className="h-[2.5vw]" src={LanguageIcon} alt="Dark theme toggle button" />
                                     :
-                                    <img className="h-[3vw]" src={LanguageDarkIcon} alt="Light theme toggle button" />
+                                    <img className="h-[2.5vw]" src={LanguageDarkIcon} alt="Light theme toggle button" />
                                 }
                             </button>
                             <button
@@ -194,11 +197,11 @@ const Home = () => {
                             >
                                 {theme === 'dark' ?
                                     <div className="flex-nowrap dark:block">
-                                        <img className="h-[4vw]" src={sunThemeIcon} alt="Clear theme button" />
+                                        <img className="h-[3.2vw]" src={sunThemeIcon} alt="Clear theme button" />
                                     </div>
                                     :
                                     <div className="flex-nowrap dark:block">
-                                        <img className="h-[4vw]" src={moonThemeIcon} alt="Clear theme button" />
+                                        <img className="h-[3.2vw]" src={moonThemeIcon} alt="Clear theme button" />
                                     </div>
                                 }
                             </button>
@@ -296,25 +299,6 @@ const Home = () => {
                                     buttonHeight="h-14"
                                     buttonFlexProps="justify-center items-center grow"
                                 />
-                                <TooltipButton
-                                    link={HenryCertificate}
-                                    mainText={language === 'en' ? 'Henry graduation certificate' : 'Certificado de graduación de Henry'}
-                                    tooltipSpan={language === 'en' ? "Here is my Full-Stack developer certificate!" : "¡Acá está mi certificado de desarrollador web Full-Stack!"}
-                                    henryTalent={HenryTalentIcon}
-                                    henrySquare={HenrySquareIcon}
-                                    tooltipText="dark:text-yellow-300 text-gray-700 font-bold"
-                                    tooltipBackground="dark:bg-gray-800 dark:bg-none bg-white"
-                                    tooltipBorder="dark:border-yellow-300 border-gray-600 border-2"
-                                    buttonTextColor="dark:text-yellow-300 text-gray-900"
-                                    buttonBackgroundColor="dark:bg-gray-800 bg-white"
-                                    buttonBorderColor="dark:border-gray-700 border-gray-200 border-2 max-phone:dark:border-yellow-300 max-phone:border-yellow-300"
-                                    hoverButtonBorderColor="dark:hover:border-yellow-300 hover:border-black active:border-yellow-300"
-                                    pointerBackground="dark:bg-gray-800 bg-yellow-100"
-                                    pointerBorder="dark:border-yellow-400 border-gray-600 border"
-                                    buttonXPadding="px-6 max-phone:py-[10%]"
-                                    buttonHeight="h-14"
-                                    buttonFlexProps="justify-center items-center  grow"
-                                />
                                 <button className="relative inline-flex max-phone:w-full max-phone:h-[20vw] h-16 w-full active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
                                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#6100ff_0%,#9100ffea_50%,#cb00ff_100%)]">
                                     </span>
@@ -331,23 +315,17 @@ const Home = () => {
                                 </button>
                             </div>
                             {/* Social media & certificate Buttons end */}
-
-                            {/* Language button start */}
-                            <div className="w-[90%] mt-10 max-phone:mt-5">
-                                <LanguageToggleButton toggleLanguage={toggleLanguage} language={language} />
-                            </div>
-                            {/* Language button end */}
                         </div>
                         {/* About presentation */}
                     </section>
                     {/* Hero presentation end */}
-                    <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
+                    <hr className="min-w-max mx-[6%] whitespace-nowrap border-2 border-collapse border-gray-300 dark:border-gray-600 rounded-md" />
 
                     {/* Experience section start */}
                     <section className="px-[8vw] w-full flex flex-col items-center shrink-0 mt-3 mb-3" id="hero-section">
 
                         {/* Experience section title start */}
-                        <header className="flex shrink-0 font-bold text-4xl max-phone:text-[9vw] underline underline-offset-4 decoration-solid text-indigo-400 dark:text-gray-100 mb-12 max-phone:mb-1 max-phone:mx-0 gap-4 items-end">
+                        <header className="flex shrink-0 font-bold text-4xl max-phone:text-[9vw] underline underline-offset-4 decoration-solid text-indigo-400 dark:text-gray-100 mb-8 max-phone:mb-1 max-phone:mx-0 gap-4 items-end">
                             <h2>{language === 'en' ? 'My experience' : 'Mi experiencia'}</h2>
                             <FontAwesomeIcon className="scale-110" icon={faBriefcase} />
                         </header>
@@ -357,74 +335,25 @@ const Home = () => {
                         <div className="shrink-0  flex flex-col gap-10">
                             <div className="flex flex-col gap-5 pt-8">
 
-                                {/* Munia experience */}
+                                {/* -- Munia experience --*/}
                                 {/* Experience Job title start */}
-                                <div className="flex flex-col gap-1">
-                                    <h2 className="text-lg max-phone:text-[7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal mb-[3vw]">{language === 'en' ? 'Front-End Developer • Munia - Mental and Emotional Health at Work' : 'Desarrollador web Frontend • Munia - Salud Mental y Emocional en el Trabajo'}</h2>
-                                    <p className="text-sm max-phone:text-[6vw] text-slate-500 dark:text-slate-400">Sept. 2023 - Nov. 2023</p>
+                                <div className="flex flex-col gap-0">
+                                    <h2 className="text-[2vw] max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">{language === 'en' ? 'Front-End Developer • Munia - Mental and Emotional Health at Work' : 'Desarrollador web Frontend • Munia - Salud Mental y Emocional en el Trabajo'}</h2>
+                                    <p className="text-[1.3vw] max-phone:text-[5.5vw] text-slate-500 dark:text-slate-400">Sept. 2023 - Nov. 2023</p>
                                 </div>
                                 {/* Experience Job title end */}
-
-
-                                {/* Experience Job description */}
-                                <ul className="list-disc flex flex-col gap-2 ml-8 mb-12 text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
-                                    <li>{language === 'en' ? 'Create a view to be able to view and edit the information of each provider, such as adding the services they offer, their time availability, and their professional documents, among others' : 'Crea una vista para poder visualizar y editar la información de cada proveedor, como agregar los servicios que ofrecen, su disponibilidad horaria, sus documentos profesionales, entre otros'}</li>
-                                    <li>{language === 'en' ? 'Plan and carry out the development of a table that will allow comments to be displayed effectively on the platform' : 'Planificar y llevar a cabo el desarrollo de una tabla que permita visualizar de manera efectiva los comentarios en la plataforma'}</li>
-                                    <li>{language === 'en' ? 'Conditional rendering based on dynamic routes and user type, using Redux toolkit, according to the role of each user, and React-Router-DOM' : 'Representación condicional basada en rutas dinámicas y tipo de usuario, utilizando el kit de herramientas Redux según el rol de cada usuario y React-Router-DOM'}</li>
-                                    <li>{language === 'en' ? 'Planning, design and development of components made with ReactJs, Material UI and Sass' : 'Planificación, diseño y desarrollo de componentes realizados con ReactJs, Material UI y Sass'}</li>
-                                </ul>
-                                {/* Experience Job description */}
-
-                                {/* Ingenium experience */}
-                                {/* Experience Job title start */}
-                                <div className="flex flex-col gap-1 ">
-                                    <h2 className="text-lg max-phone:text-[7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal mb-[3vw]">{language === 'en' ? 'Front-End Developer • Ingenium - Financial management and administration' : 'Desarrollador web Frontend • Ingenium - Gestión y administración financiera'}</h2>
-                                    <p className="text-sm max-phone:text-[6vw] text-slate-500 dark:text-slate-400">Sept. 2024 - Nov. 2024</p>
-                                </div>
-                                {/* Experience Job title end */}
-
-
                                 {/* Experience Job description */}
                                 <ul className="list-disc flex flex-col gap-2 ml-8 text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
-                                    <li>{language === 'en' ? 'Design and creation of the company logo, "Ingcoin", using Blender to create a detailed 3D model, incorporating the company\'s slogan and year of foundation' : 'Diseño y creación del logo de la empresa, "Ingcoin", utilizando Blender para crear un modelo 3D detallado, incorporando el eslogan de la empresa y el año de fundación'}</li>
-                                    <li>{language === 'en' ? 'Develop the main landing page using React.js, Framer-Motion, and TailwindCSS, ensuring an intuitive and modern user experience that reflects the company\'s branding' : 'Desarrollar la página de inicio principal utilizando React.js, Framer-Motion, y TailwindCSS, garantizando una experiencia de usuario intuitiva y moderna que refleje la imagen de la empresa'}</li>
-                                    <li>{language === 'en' ? 'Integrate a responsive design across the website to optimize its functionality on various screen sizes, enhancing accessibility and user interaction' : 'Integrar un diseño responsive en todo el sitio web para optimizar su funcionalidad en diferentes tamaños de pantalla, mejorando la accesibilidad y la interacción del usuario'}</li>
-                                    <li>{language === 'en' ? 'Optimize website loading times and performance by applying best practices in code structure and asset management, ensuring smooth navigation' : 'Optimizar los tiempos de carga del sitio web y su rendimiento aplicando las mejores prácticas en la estructura del código y gestión de recursos, garantizando una navegación fluida'}</li>
+                                    <li>{language === 'en' ? 'I collaborated in the creation of a platform for virtual sessions, connecting health professionals with employees.' : 'Colaboré en la creación de una plataforma para sesiones virtuales, conectando profesionales de salud con empleados.'}</li>
+                                    <li>{language === 'en' ? "I developed scalable, stylized components tailored to the client's needs." : 'Desarrollé componentes escalables, estilizados y adaptados a las necesidades del cliente.'}</li>
+                                    <li>{language === 'en' ? 'Implemented modern and responsive interfaces with React.js and Material-UI.' : 'Implementé interfaces modernas y adaptativas con React.js y Material-UI.'}</li>
+                                    <li>{language === 'en' ? 'Collaborated with the team to optimize the user experience through strategic design and analysis.' : 'Colaboré con el equipo para optimizar la experiencia del usuario mediante diseño estratégico y análisis.'}</li>
                                 </ul>
-
-                                {/* Experience Job description */}
-
-                            </div>
-                        </div>
-                        {/* Experience section text end */}
-                    </section>
-                    {/* Experience section end*/}
-                    <hr className="px-10 min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
-
-                    {/* Projects section start */}
-                    <section className="w-full max-phone:w-[fit] flex flex-col items-center mt-2">
-
-
-                        {/* Projects section title */}
-                        <header className="flex font-bold text-center underline underline-offset-4 text-4xl max-phone:text-[9vw] text-indigo-400 dark:text-gray-100 mb-12 max-phone:mb-8 max-phone:pl-3 max-phone:min-w-full max-phone:justify-center max-phone:px-0 items-center gap-3">
-                            <h2>{language === 'en' ? 'My projects' : 'Mis proyectos'}</h2>
-                            <FontAwesomeIcon icon={faStar} className="scale-110" />
-                        </header>
-                        {/* Projects section title */}
-
-
-                        {/* My projects */}
-                        <div className="w-full max-tablet:w-[80%] max-phone:w-[80%] flex flex-col items-center gap-10 max-phone:text-[5vw]">
-
-                            {/* My projects container */}
-                            <div className="grid gap-10">
-
-
                                 {/* Munia project container*/}
-                                <article className="relative flex flex-col justify-between w-full mt-4 max-phone:mb-6">
+                                <article className="relative flex flex-col justify-between w-full max-phone:mb-6 mt-[2vw]">
                                     {/* Munia project description */}
                                     <div className="flex flex-col items-center">
-                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[7.5vw] text-center font-bold">{language === 'en' ? 'Munia sessions 1:1' : 'Munia Sesiones 1:1'}</h2>
+                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[7.5vw] text-center font-bold">{language === 'en' ? 'Munia sessions 1:1 project' : 'Proyecto Munia Sesiones 1:1'}</h2>
                                         <p className="text-slate-400 dark:text-slate-200 text-center mt-5">{language === 'en' ? 'The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses' : 'La aplicación web permite a los profesionales de la salud de “Munia.co” conectarse con empleados de empresas asociadas a través de Zoom para sesiones y diagnósticos virtuales'}</p>
                                     </div>
                                     {/* Munia project description */}
@@ -466,7 +395,7 @@ const Home = () => {
                                             pointerBorder="dark:border-[#9c6e61] border-2 border-zinc-600"
                                             buttonXPadding="px-6 max-phone:py-[3%]"
                                             buttonHeight="h-10 max-phone:h-full"
-                                            buttonWidth="w-[85%] max-phone:w-[100%]"
+                                            buttonWidth="w-[100%] max-phone:w-[100%]"
                                             buttonFlexProps="justify-center items-center active:scale-95 transition"
                                         />
                                     </div>
@@ -474,21 +403,35 @@ const Home = () => {
                                     {/* Munia project technologies icons */}
 
                                     {/* Munia project login image */}
-                                    <a href="https://users.munia.co/sign-in" target="_blank" rel="noreferrer" className="max-phone:min-w-0 h-fit w-[85%] max-phone:w-[100%] mx-auto my-8 group rounded-2xl shadow_translate-transition hover:shadow-2xl hover:shadow-orange-200 active:shadow-orange-300 active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-orange-200 dark:active:shadow-orange-300 max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-orange-200 max-phone:shadow-orange-200">
+                                    <a href="https://users.munia.co/sign-in" target="_blank" rel="noreferrer" className="max-phone:min-w-0 h-fit w-[85%] max-phone:w-[100%] mx-auto my-8 group rounded-2xl hover:duration-75 shadow_translate-transition max-phone:[filter:drop-shadow(0px_5px_12px_#9c6e61)] hover:[filter:drop-shadow(0px_0px_13px_#9c6e61)]">
                                         <img className="aspect-auto rounded-2xl" src={MuniaLoginPic} alt="MuniaLoginPic" />
                                     </a>
                                     {/* Munia project login image */}
 
                                 </article>
                                 {/* Munia project container*/}
+                                {/* Experience Job description */}
 
                                 <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
+                                {/* -- Grow Up experience -- */}
+                                {/* Experience Job title start */}
+                                <div className="flex flex-col gap-1 mt-[1vw]">
+                                    <h2 className="text-[2vw] max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">{language === 'en' ? 'Backend developer' : 'Desarrollador backend'} •  Henry - {language === 'en' ? '"Grow Up"' : '"Grow Up"'}</h2>
+                                    <p className="text-[1.3vw] max-phone:text-[5.5vw] text-slate-500 dark:text-slate-400">{language === 'en' ? 'June 2022 - July 2022' : 'Junio 2022 - Julio. 2022'}</p>
+                                </div>
+                                {/* Experience Job title end */}
+                                {/* Experience Job description */}
+                                <ul className="list-disc flex flex-col gap-2 ml-8 text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
+                                    <li>{language === 'en' ? 'I developed an e-commerce in collaboration with a team of 6 developers.' : 'Desarrollé un e-commerce en colaboración con un equipo de 6 desarrolladores.'}</li>
+                                    <li>{language === 'en' ? 'I coordinated tasks using SCRUM and ensured deliveries within the established deadline.' : 'Coordiné tareas utilizando SCRUM y asegurando entregas dentro del plazo establecido.'}</li>
+                                    <li>{language === 'en' ? 'I implemented book retrieval routes, carousels, and other tools.' : 'Implementé rutas de obtención de libros, carrusel y demás herramientas.'}</li>
+                                </ul>
                                 {/* Grow-Up project container*/}
-                                <article className="relative flex flex-col justify-between w-full max-phone:mb-6">
+                                <article className="relative flex flex-col justify-between w-full max-phone:mb-6 mt-[2vw]">
                                     <div className="flex flex-col items-center">
-                                        <h2 className="text-gray-700 text-center mr-2 dark:text-gray-200 text-2xl max-phone:text-[7vw] font-bold">{language === 'en' ? '"Grow-Up" Books E-commerce' : 'Tienda de libros en línea'}</h2>
-                                        <h2 className="text-gray-700 text-center mr-2 dark:text-gray-200 text-2xl max-phone:text-[7vw] font-bold">{language === 'en' ? '' : '"Grow-Up"'}</h2>
+                                        <h2 className="text-gray-700 text-center dark:text-gray-200 text-2xl max-phone:text-[7vw] font-bold">{language === 'en' ? '"Grow-Up" Books E-commerce' : 'Tienda de libros en línea'}</h2>
+                                        <h2 className="text-gray-700 text-center dark:text-gray-200 text-2xl max-phone:text-[7vw] font-bold">{language === 'en' ? '' : '"Grow-Up"'}</h2>
                                         <p className="text-slate-400 text-center dark:text-slate-200 mt-5">{language === 'en' ? 'This project brings people the oportunity of searching, filtering, and updating new books about self development and inspiration, as well as buying new best sellers' : 'Este proyecto brinda a las personas la oportunidad de buscar, filtrar y actualizar nuevos libros sobre desarrollo personal e inspiración, así como comprar nuevos best sellers'}</p>
                                         <p className="text-slate-400 text-center dark:text-slate-200 mt-5">{language === 'en' ? 'There is a video below that explains and cover most part of the website' : 'A continuación se muestra un video que explica y cubre la mayor parte del sitio web'}</p>
                                         <p className="text-slate-900 text-center dark:text-slate-400 mt-5">{language === 'en' ? '(The mentioned video is in Spanish language, since it is my native language)' : '(El video mencionado está en español, ya que es mi lengua materna)'}</p>
@@ -519,14 +462,30 @@ const Home = () => {
                                     </div>
                                     <p className="text-slate-900 dark:text-slate-400 mb-10 mt-2">{language === 'en' ? '(Click on the button with the text "Youtube" for full screen)' : '(Click en el botón con el texto "Youtube" para pantalla completa)'}</p>
                                     {/* Project technologies icons */}
-                                    <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" className="h-fit w-[85%] max-phone:w-[100%] mx-auto mb-4 group hover:shadow-2xl hover:shadow-[#84a4ac] active:shadow-[#92BBC7] active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-[#84a4ac] dark:active:shadow-[#92BBC7] max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-[#84a4ac] max-phone:shadow-[#84a4ac] rounded-xl">
+                                    <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" className="h-fit w-[100%] max-phone:w-[100%] mx-auto mb-4 group max-phone:[filter:drop-shadow(0px_5px_10px_#7dd3fc)] hover:[filter:drop-shadow(0px_0px_12px_#7dd3fc)] hover:duration-100 rounded-xl">
                                         <iframe className="aspect-video rounded-xl" width="100%" height="100%" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                                     </a>
                                 </article>
                                 {/* Grow-Up project container*/}
+                                {/* Experience Job description */}
 
                                 <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
+                                {/* -- Climate Ducky experience -- */}
+                                {/* Experience Job title start */}
+                                <div className="flex flex-col gap-1 mt-[2vw]">
+                                    <h2 className="text-[2vw] max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">Full Stack developer •  DamiD3v - Climate Ducky</h2>
+                                    <p className="text-[1.3vw] max-phone:text-[5.5vw] text-slate-500 dark:text-slate-400">{language === 'en' ? 'May. 2024 - Aug. 2024' : 'Mayo 2024 - Ago. 2024'}</p>
+                                </div>
+                                {/* Experience Job title end */}
+                                {/* Experience Job description */}
+                                <ul className="list-disc flex flex-col gap-2 ml-8 text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
+                                    <li>{language === 'en' ? 'I developed a Full-Stack weather web application, using React.js, CSS, Motion, Node.js, and the OpenWeatherMap API, to use international weather services.' : 'Desarrollé una aplicación web Full-Stack del clima, utilizando React.js, CSS, Motion, Node.js, y la api de OpenWeatherMap, para utilizar servicios meteorológicos internacionales.'}</li>
+                                    <li>{language === 'en' ? 'I created the design, user interface, animations, branding and logo, creating an original, innovative, useful, functional website that uses the latest technologies on the market.' : 'Creé el diseño, interfaz de usuario, animaciones, branding y logo, creando un sitio web original, novedoso, útil, funcional, y que usa las últimas tecnologías del mercado.'}</li>
+                                    <li>{language === 'en' ? 'I added different versions of the design, to ensure compatibility, readability and functionality on multiple (mobile) devices.' : 'Agregué distintas versiones del diseño, para asegurar la compatibilidad, legibilidad y funcionalidad en múltiples dispositivos (móviles).'}</li>
+                                    <li>{language === 'en' ? 'I implemented reusable components and site performance optimization to improve user experience.' : 'Implementé componentes reutilizables y optimización del rendimiento del sitio para mejorar la experiencia del usuario.'}</li>
+                                    <li>{language === 'en' ? 'I imported sounds, programmed functional logic in JavaScript, and edited vector graphics in SVG format.' : 'Importé sonidos, programé lógica funcional en JavaScript y edité gráficos vectoriales en formato SVG.'}</li>
+                                </ul>
                                 {/* Climate-Ducky project container*/}
                                 <article className="relative flex flex-col justify-between w-full ">
                                     {/* Climate-Ducky description */}
@@ -582,7 +541,7 @@ const Home = () => {
                                             pointerBorder="dark:border-sky-300 border-2 border-sky-500"
                                             buttonXPadding="px-6 py-6 max-phone:py-[3%]"
                                             buttonHeight="h-10 max-phone:h-full"
-                                            buttonWidth="w-[85%] max-phone:w-[100%]"
+                                            buttonWidth="w-[100%] max-phone:w-[100%]"
                                             buttonFlexProps="justify-center items-center active:scale-95 transition"
                                         />
                                     </div>
@@ -590,21 +549,37 @@ const Home = () => {
                                     {/* Climate-Ducky technologies icons */}
 
                                     {/* Climate-Ducky login image */}
-                                    <a href="https://climate-ducky.vercel.app/" target="_blank" rel="noreferrer" className="max-phone:min-w-0 h-fit w-[85%] max-phone:w-[100%] mx-auto rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-sky-300 max-phone:shadow-sky-300 dark:hover:shadow-sky-300 hover:shadow-2xl hover:shadow-sky-300 active:shadow-2xl active:shadow-sky-400">
+                                    <a href="https://climate-ducky.vercel.app/" target="_blank" rel="noreferrer" className="max-phone:min-w-0 mb-[1.2vw] h-fit w-[100%] max-phone:w-[100%] mx-auto rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:[filter:drop-shadow(0px_2px_10px_#7dd3fc)] hover:[filter:drop-shadow(0px_0px_10px_#7dd3fc)] hover:shadow-2xl hover:duration-75  active:shadow-2xl active:shadow-sky-400">
                                         <img className="aspect-auto rounded-2xl" src={ClimateDuckyScreenshot} alt="MuniaLoginPic" />
                                     </a>
                                     {/* Climate-Ducky login image */}
                                 </article>
                                 {/* Climate-Ducky project container*/}
+                                {/* Experience Job description */}
 
                                 <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
+                                {/* -- Ingenium experience -- */}
+                                {/* Experience Job title start */}
+                                <div className="flex flex-col gap-1 mt-[2vw]">
+                                    <h2 className="text-[2vw] max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">{language === 'en' ? 'Front-End Developer • Ingenium - Financial management and administration' : 'Desarrollador web Frontend • Ingenium - Gestión y administración financiera'}</h2>
+                                    <p className="text-[1.3vw] max-phone:text-[5.5vw] text-slate-500 dark:text-slate-400">{language === 'en' ? 'Sept. 2024 - Dec. 2024' : 'Sept. 2024 - Dic. 2024'}</p>
+                                </div>
+                                {/* Experience Job title end */}
+                                {/* Experience Job description */}
+                                <ul className="list-disc flex flex-col gap-2 ml-8 text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
+                                    <li>{language === 'en' ? 'I developed the corporate website of the nascent company “Ingenium” using React.js and TailwindCSS, ensuring a modern, adaptive and attractive design for users.' : 'Desarrollé la página web corporativa de la naciente empresa “Ingenium” utilizando React.js y TailwindCSS, asegurando un diseño moderno, adaptativo y atractivo para los usuarios.'}</li>
+                                    <li>{language === 'en' ? 'Implemented reusable components and site performance optimization to improve user experience.' : 'Implementé componentes reutilizables y optimización del rendimiento del sitio para mejorar la experiencia del usuario.'}</li>
+                                    <li>{language === 'en' ? 'I created the design, user interface, and web structure, to align aesthetics and functionality with the company\'s objectives.' : 'Creé el diseño, interfaz de usuario, y estructura web, para alinear la estética y funcionalidad con los objetivos de la empresa.'}</li>
+                                    <li>{language === 'en' ? 'I improved accessibility and optimized SEO to increase the brand\'s digital visibility.' : 'Mejoré la accesibilidad y optimicé el SEO para aumentar la visibilidad digital de la marca.'}</li>
+                                    <li>{language === 'en' ? 'I integrated an online appointment system, social media links, and call-to-action buttons.' : 'Integré un sistema de turnos en línea, enlaces a redes sociales y botones de llamada a la acción.'}</li>
+                                </ul>
                                 {/* Ingenium project container*/}
                                 <article className="relative flex flex-col justify-center w-full ">
                                     {/* Ingenium description */}
                                     <div className="flex flex-col items-center justify-center">
                                         {/* Título proyecto */}
-                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[7vw] text-center font-bold">{language === 'en' ? 'Current working project "Ingenium.net.ar""' : 'Actualmente trabajando en el proyecto "Ingenium.net.ar"'}</h2>
+                                        <h2 className="text-gray-700 mt-[2vw] dark:text-gray-200 text-2xl max-phone:text-[7vw] text-center font-bold">{language === 'en' ? 'Current working project "Ingenium.net.ar""' : 'Actualmente trabajando en el proyecto "Ingenium.net.ar"'}</h2>
                                         {/* Subtítulo proyecto */}
                                         <p className="text-slate-400 dark:text-slate-200 text-center mt-5">{language === 'en' ? 'Ingenium is a company that offers administration, financial management, and...' : `Ingenium es una empresa que ofrece servicios de administración, gestión financiera, y...`}</p>
                                         {/* Subtítulo mensaje */}
@@ -664,7 +639,7 @@ const Home = () => {
                                             pointerBorder="dark:border-blue-300 border-2 border-blue-500"
                                             buttonXPadding="px-6 max-phone:py-[3%]"
                                             buttonHeight="h-10 max-phone:h-full"
-                                            buttonWidth="w-[85%] max-phone:w-[100%]"
+                                            buttonWidth="w-[100%] max-phone:w-[100%]"
                                             buttonFlexProps="justify-center items-center active:scale-95 transition"
                                         />
                                     </div>
@@ -673,36 +648,102 @@ const Home = () => {
                                     {/* Ingenium technologies icons */}
 
                                     {/* Ingenium Trailer video */}
-                                    <div className="max-phone:min-w-0 aspect-auto h-fit w-[85%] max-phone:w-[100%] mx-auto my-10 rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-blue-300 max-phone:shadow-blue-300 dark:hover:shadow-blue-300 hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-400">
+                                    <div className="max-phone:min-w-0 aspect-auto h-fit w-[100%] max-phone:w-[100%] mx-auto my-10 rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-blue-300 max-phone:shadow-blue-300 dark:hover:shadow-blue-300 hover:duration-100 hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-400">
                                         <video className="aspect-auto rounded-2xl" src={IngeniumFinishedTrailer} controls={true} muted={true} alt="MuniaLoginPic" />
                                     </div>
                                     {/* Ingenium Trailer video */}
                                 </article>
                                 {/* Ingenium project container*/}
-
+                                {/* Experience Job description */}
 
                             </div>
-                            {/* My projects container */}
-
                         </div>
-                        {/* My projects */}
+                        {/* Experience section text end */}
+                    </section>
+                    {/* Experience section end*/}
+                    <hr className="px-10 mx-[6%] min-w-max whitespace-nowrap border-2 border-collapse border-gray-300 dark:border-gray-600 rounded-md" />
+                    
+                    {/* Studies section */}
+                    <section className="px-[0vw] flex flex-col items-center justify-center w-full max-phone:flex max-phone:flex-col max-phone:items-center">
+                        <header className="flex shrink-0 font-bold text-4xl max-phone:text-[9vw] underline underline-offset-4 decoration-solid text-indigo-400 dark:text-gray-100 mb-8 max-phone:mb-1 max-phone:mx-0 gap-4 items-end">
+                            <h2>{language === 'en' ? 'My studies' : 'Mis estudios'}</h2>
+                            <FontAwesomeIcon className="scale-110" icon={faGraduationCap} />
+                        </header>
+                        <section className="flex flex-col justify-center items-center">
 
+                            {/* Graduation description */}
+                            <div className="flex flex-col gap-0 max-phone:px-[6%] mt-[3vw]">
+                                <h2 className="text-[2vw] max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">{language === 'en' ? 'Graduated programmer • Sarmiento Professional School Nº 8' : 'Graduado de programador • Escuela Profesional Sarmiento Nº 8'}</h2>
+                                <p className="text-[1.3vw] max-phone:text-[5.5vw] text-slate-500 dark:text-slate-400">{language === 'en' ? 'March 2024 - Dec. 2024' : 'Marzo 2024 - Dic. 2024'}</p>
+                            </div>
+                            <ul className="list-disc max-phone:px-[2%] flex flex-col gap-2 ml-[10%] my-[3%] text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
+                                <li>{language === 'en' ? 'I have a national Argentine programmer certification, ready to enter the job market and join web development teams.' : 'Dispongo de una certificación de programador a nivel nacional argentino, listo para ingresar al mercado laboral, e integrarme a equipos de desarrollo web.'}</li>
+                            </ul>
 
+                            {/* Diploma presentation section */}
+                            <article className="flex flex-col justify-center items-center my-[2vw] max-phone:px-[6%]">
+                                <h3 className="text-[2vw] text-center max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">
+                                    {language === 'en' ? 'Argentina National programmer diploma' : 'Diploma de programador a nivel nacional argentino'}
+                                </h3>
+                                <p className="text-slate-500 dark:text-slate-400 text-center mt-[0.4%] mx-[16%]">
+                                    {language === 'en' ? 'This diploma certifies me as a programmer at a national level, allowing me to develop web applications.' : 'Este diploma me certifica como un programador a nivel nacional, permitiéndome desarrollar aplicaciones web.'}
+                                </p>
+                                <img className="p-[2%] dark:bg-[#4f4d46] bg-black rounded-[1px] w-[75%] h-fit mt-[5%] aspect-auto [filter:drop-shadow(0px_0px_30px_#4f4d46)]" src={Diploma} alt="DamiD3v diploma" />
+                            </article>
+
+                            <hr className="w-[85%] max-phone:my-[8%] whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
+
+                            {/* Henry certificate */}
+                            <div className="flex flex-col gap-0 mt-[3vw] max-phone:px-[6%]">
+                                <h2 className="text-[2vw] max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">{language === 'en' ? 'Full-Stack Programmer Graduate • Henry Bootcamp' : 'Egresado de programador Full-Stack • Henry Bootcamp'}</h2>
+                                <p className="text-[1.3vw] max-phone:text-[5.5vw] text-slate-500 dark:text-slate-400">{language === 'en' ? 'June 2022 - July 2022' : 'Junio 2022 - Julio 2022'}</p>
+                            </div>
+                            <ul className="list-disc max-phone:px-[2%] flex flex-col gap-2 ml-[10%] my-[3%] text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
+                                <li>{language === 'en' ? 'Where I had more than 800 hours of learning in web development, agile methodologies and good practices.' : 'Donde tuve más de 800 horas de aprendizaje en desarrollo web, metodologías ágiles y buenas prácticas.'}</li>
+                            </ul>
+                            <article className="flex flex-col justify-center items-center my-[2vw]">
+                                <h3 className="text-[2vw] max-phone:px-[6%] max-phone:mt-[5%] text-center max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">
+                                    {language === 'en' ? 'Full-Stack programmer certificate' : 'Certificado de programador Full-Stack'}
+                                </h3>
+                                <p className="text-slate-500 dark:text-slate-400 text-center mt-[0.4%] max-phone:text-[4.3vw] max-phone:mt-[2%] mx-[6%]">
+                                    {language === 'en' ? 'This Full-Stack Programmer certificate indicates that I have the ability to develop complete web applications on my own, having completed a private international programming bootcamp.' : 'Este certificado de programador Full-Stack, indica que tengo la capacidad de desarrollar aplicaciones web completas, por mi cuenta. Por haber completado un bootcamp privado de programación internacional.'}
+                                </p>
+                                <img className="p-[2%] dark:bg-black bg-black rounded-[1px] w-[75%] h-fit mt-[5%] aspect-auto border-2 border-yellow-300 [filter:drop-shadow(0px_0px_8px_yellow)]" src={HenryCertificate} alt="DamiD3v diploma" />
+                            </article>
+
+                            <hr className="w-[85%] max-phone:my-[8%] whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
+
+                            {/* English certificate */}
+                            <article className="flex flex-col justify-center items-center my-[2vw]">
+                                <h3 className="text-[2vw] text-center max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">
+                                    {language === 'en' ? 'English C1 level certificate' : 'Certificado de Inglés C1'}
+                                </h3>
+                                <p className="text-[1.3vw] mb-[2%] max-phone:text-[5.5vw] text-slate-500 dark:text-slate-400"><strong>18/07/2022</strong></p>
+                                <p className="text-slate-500 dark:text-slate-400 text-center mt-[0.4%] mx-[6%]">
+                                    {language === 'en' ? 'This certificate comes from a test that I took in 2022 to measure my level of English.' : 'Este certificado viene de una una evaluación que tomé en 2022 para medir mi nivel de Inglés.'}
+                                </p>
+                                <a href="https://cert.efset.org/bHumkJ" target="_blank" className="flex flex-col items-center justify-center w-[75%] h-fit">
+                                    <img className="aspect-auto p-[1%] dark:bg-[#e34ae6] bg-[#e34ae6] rounded-[1px] w-[100%] h-fit mt-[5%] hover:[filter:drop-shadow(0px_0px_20px_#e34ae6)] hover:duration-100 max-phone:[filter:drop-shadow(0px_0px_18px_#e34ae6)]" src={EnglishCertificate} alt="DamiD3v diploma" />
+                                </a>
+                            </article>
+                        </section>
                     </section>
 
-                    {/* Projects section end */}
+                    <hr className="px-10 mx-[6%] min-w-max whitespace-nowrap border-2 border-collapse border-gray-300 dark:border-gray-600 rounded-md" />
 
-                    <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
-                    {/* Email section start */}
+                    {/* Email section */}
                     <section className="px-[0vw] flex flex-col items-center justify-center w-full max-phone:flex max-phone:flex-col max-phone:items-center">
                         {/* Email Title */}
-                        <header className="font-bold text-3xl max-phone:text-[7vw] text-indigo-400 dark:text-gray-100 flex max-phone:justify-center justify-center max-phone:pl-5 items-center gap-3">
+                        <header className="font-bold text-3xl max-phone:text-[7vw] text-indigo-400 dark:text-gray-100 flex max-phone:justify-center justify-center max-phone:pl-0 items-center gap-3">
                             <h2>{language === 'en' ? 'Email' : 'Correo electrónico'}</h2>
                             <FontAwesomeIcon icon={faEnvelope} className="scale-110" />
                         </header>
+                        <p className="text-slate-500 dark:text-slate-400 text-center mt-[0.4%] mx-[6%]">
+                            {language === 'en' ? 'If you wish to contact me, you can send me an email by clicking the button below.' : 'Si deseas contactarme, puedes enviarme un correo electrónico pulsando el botón de abajo.'}
+                        </p>
                         {/* Contenedor del botón */}
                         <div className="w-[85%] flex flex-col items-center justify-center">
-                            <a href="mailto:marcosdamian054@gmail.com" target="_blank" className="relative flex-col items-center justify-center flex max-phone:w-[75%] max-phone:h-[14vw] h-[4.8vw] w-[100%] active:scale-95 transition overflow-hidden rounded-lg p-[1px] max-phone:mt-[10vw] max-phone:mb-[3vw] mt-[3vw] mb-[0.8vw] focus:outline-none">
+                            <a href="mailto:marcosdamian054@gmail.com" target="_blank" className="relative flex-col items-center justify-center flex max-phone:w-[95%] max-phone:h-[14vw] h-[4.8vw] w-[100%] active:scale-95 transition overflow-hidden rounded-lg p-[1px] max-phone:mt-[6vw] max-phone:mb-[2vw] mt-[3vw] mb-[0.8vw] focus:outline-none">
                                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#6100ff_0%,#9100ffea_50%,#cb00ff_100%)]">
                                 </span>
                                 <span className="flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-transparent px-7 text-lg max-phone:text-[5vw] font-medium text-white backdrop-blur-3xl gap-4 undefined tracking-tight leading-[5vw]">
@@ -719,7 +760,31 @@ const Home = () => {
                         </div>
                         {/* Email Input */}
                     </section>
-                    {/* Email section end*/}
+                    {/* Footer section*/}
+                    <footer className="footer bg-neutral text-neutral-content max-phone:p-6 p-14">
+                        <aside>
+                            <img className="w-[13%] max-phone:w-[25%]" src={portfolioIcon} alt="Portfolio icon" />
+                            <p className="text-gray-800 text-[125%] dark:text-white flex flex-col gap-[8%] max-phone:gap-[1vw]">
+                                {language === 'en' ? <p className="font-Jersey10PixelFont">Website made by <strong>DamiD3v</strong></p> : <p className="font-Jersey10PixelFont">Sitio web hecho por <strong className="font-Jersey10PixelFont">DamiD3v</strong></p>}
+                                {language === 'en' ? <p>Updated to <strong>Dec. 2024</strong></p> : <p className="">Actualizado a <strong>Dic. 2024</strong></p>}
+                            </p>
+                        </aside>
+                        <nav className="flex flex-col w-fit justify-start items-start">
+                            <h6 className="footer-title text-gray-800 dark:text-white">{language === 'en' ? 'social' : 'Mis redes'}</h6>
+                            <div className="flex justify-start items-start w-full gap-0">
+                                <a href="https://github.com/DamiD3v" className="w-10 h-10" target="_blank">
+                                    <FontAwesomeIcon icon={faGithub} className="text-gray-800 dark:text-white w-[75%] h-[75%]" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/medina-marcos-developer/" className="w-10 h-10" target="_blank">
+                                    <FontAwesomeIcon icon={faLinkedin} className="text-gray-800 dark:text-white w-[75%] h-[75%]" />
+                                </a>
+                                <a href="mailto:marcosdamian054@gmail.com" className="w-10 h-10" target="_blank">
+                                    <FontAwesomeIcon icon={faEnvelope} className="text-gray-800 dark:text-white w-[75%] h-[75%]" />
+                                </a>
+
+                            </div>
+                        </nav>
+                    </footer>
                 </main>
             </div >
             {/* Main end */}
