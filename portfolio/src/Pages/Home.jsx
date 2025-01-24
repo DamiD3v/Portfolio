@@ -696,7 +696,7 @@ const Home = () => {
                             {/* Henry certificate */}
                             <div className="flex flex-col gap-0 mt-[3vw] max-phone:px-[6%]">
                                 <h2 className="text-[2vw] max-phone:text-[6.7vw] font-semibold text-slate-700 dark:text-slate-200 max-phone:leading-[10vw] max-phone:tracking-normal max-phone:mb-[1vw] mb-[0.5vw]">{language === 'en' ? 'Full-Stack Programmer Graduate • Henry Bootcamp' : 'Egresado de programador Full-Stack • Henry Bootcamp'}</h2>
-                                <p className="text-[1.3vw] max-phone:text-[5.5vw] text-slate-500 dark:text-slate-400">{language === 'en' ? 'June 2022 - July 2022' : 'Junio 2022 - Julio 2022'}</p>
+                                <p className="text-[1.3vw] max-phone:text-[5.5vw] text-slate-500 dark:text-slate-400">{language === 'en' ? 'Feb 2022 - July 2022' : 'Feb 2022 - Julio 2022'}</p>
                             </div>
                             <ul className="list-disc max-phone:px-[2%] flex flex-col gap-2 ml-[10%] my-[3%] text-slate-700 dark:text-gray-300 text-md max-phone:text-[5vw]">
                                 <li>{language === 'en' ? 'Where I had more than 800 hours of learning in web development, agile methodologies and good practices.' : 'Donde tuve más de 800 horas de aprendizaje en desarrollo web, metodologías ágiles y buenas prácticas.'}</li>
